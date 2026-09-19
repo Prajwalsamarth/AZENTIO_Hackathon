@@ -1,0 +1,1940 @@
+[
+  {
+    "synthetic_id": "SYN_F_001",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "high-risk merchant category GIFT_CARD",
+      "7 transactions in the preceding 24h",
+      "only 3.5 minutes since the previous transaction",
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.7024291497975709,
+      "autoencoder": 0.9919028340080972,
+      "fused": 0.774966261808367
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 1012.76,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "ONLINE",
+      "status": "SUCCESS",
+      "merchant_category": "GIFT_CARD",
+      "merchant_country": "IN",
+      "merchant_city": "Kochi",
+      "device_type": "IOS",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 6.9,
+      "time_since_prev_txn_mins": 3.51,
+      "txn_count_last_24h": 7,
+      "txn_count_last_7d": 7,
+      "amount_to_account_avg_ratio": 0.065,
+      "balance_after_txn": 7876.38,
+      "transaction_hour": 14,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "HIGH_RISK_MCC",
+      "AUTH_STRIPPED",
+      "VELOCITY_BURST"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "merchant_category": {
+        "from": "SUBSCRIPTION",
+        "to": "GIFT_CARD"
+      },
+      "txn_count_last_24h": {
+        "from": 1,
+        "to": 7
+      },
+      "merchant_id": {
+        "from": "MER_4017",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 0.081,
+        "to": 0.065
+      },
+      "merchant_name": {
+        "from": "Netflix",
+        "to": null
+      },
+      "txn_count_last_7d": {
+        "from": 1,
+        "to": 7
+      },
+      "auth_method": {
+        "from": null,
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "time_since_prev_txn_mins": {
+        "from": 7.0,
+        "to": 3.51
+      }
+    },
+    "justification": "The transaction is classified as fraud due to the high-risk merchant category of GIFT_CARD, the unusually high frequency of 7 transactions in the last 24 hours, and the use of a new device just 3.5 minutes after the previous transaction.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_002",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ],
+    "rule_reasons": [
+      "no authentication on a 684,019 INR transaction",
+      "amount is 86x the account average",
+      "5 transactions in the preceding 24h",
+      "only 1.6 minutes since the previous transaction",
+      "initiated from a device not seen before",
+      "drove the account balance negative"
+    ],
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.944331983805668,
+      "autoencoder": 1.0,
+      "fused": 0.9832995951417005
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 684019.38,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "ELECTRONICS",
+      "merchant_country": "IN",
+      "merchant_city": "Mumbai",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 8.3,
+      "time_since_prev_txn_mins": 1.6,
+      "txn_count_last_24h": 5,
+      "txn_count_last_7d": 5,
+      "amount_to_account_avg_ratio": 86.004,
+      "balance_after_txn": -617452.26,
+      "transaction_hour": 22,
+      "is_weekend": false,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "MEDIUM",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "AMOUNT_ESCALATION",
+      "VELOCITY_BURST",
+      "AUTH_STRIPPED"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "txn_count_last_24h": {
+        "from": 1,
+        "to": 5
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "merchant_id": {
+        "from": "MER_1412",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 1.792,
+        "to": 86.004
+      },
+      "merchant_name": {
+        "from": "Croma Electronics",
+        "to": null
+      },
+      "txn_count_last_7d": {
+        "from": 1,
+        "to": 5
+      },
+      "auth_method": {
+        "from": "PIN",
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "balance_after_txn": {
+        "from": 61817.39,
+        "to": -617452.26
+      },
+      "amount": {
+        "from": 4749.73,
+        "to": 684019.38
+      },
+      "time_since_prev_txn_mins": {
+        "from": 286.0,
+        "to": 1.6
+      }
+    },
+    "justification": "The transaction is classified as fraud due to the lack of authentication on a high-value purchase of 684,019 INR, which is 86 times the account's average transaction amount, occurred just 1.6 minutes after a previous transaction, and was initiated from a new device, resulting in a negative account balance.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_003",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "BALANCE_NEGATIVE"
+    ],
+    "rule_reasons": [
+      "high-risk merchant category GAMBLING",
+      "amount is 162x the account average",
+      "occurred at 03:00, outside normal activity hours",
+      "drove the account balance negative"
+    ],
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.958502024291498,
+      "autoencoder": 1.0,
+      "fused": 0.8542172739541161
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 1884237.34,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "GAMBLING",
+      "merchant_country": "IN",
+      "merchant_city": "Chennai",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 6.5,
+      "time_since_prev_txn_mins": 70734.45,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 162.438,
+      "balance_after_txn": -1863751.96,
+      "transaction_hour": 3,
+      "is_weekend": true,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "GOLD",
+      "cust_risk_rating": "MEDIUM",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "NIGHT_SHIFT",
+      "AMOUNT_ESCALATION",
+      "HIGH_RISK_MCC"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "merchant_category": {
+        "from": "JEWELLERY",
+        "to": "GAMBLING"
+      },
+      "transaction_timestamp": {
+        "from": "2026-08-02 06:29:03",
+        "to": "2026-08-02 03:29:03"
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "transaction_hour": {
+        "from": 6,
+        "to": 3
+      },
+      "merchant_id": {
+        "from": "MER_5005",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 1.026,
+        "to": 162.438
+      },
+      "merchant_name": {
+        "from": "Tanishq Jewellers",
+        "to": null
+      },
+      "balance_after_txn": {
+        "from": 1713.8,
+        "to": -1863751.96
+      },
+      "amount": {
+        "from": 18771.58,
+        "to": 1884237.34
+      }
+    },
+    "justification": "The transaction is classified as fraud due to its high-risk gambling category, an amount significantly exceeding the account average by 162 times, and it resulted in a negative account balance, all occurring at an unusual hour of 3:00 AM.",
+    "confidence": 0.95,
+    "split": "valid"
+  },
+  {
+    "synthetic_id": "SYN_F_004",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ],
+    "rule_reasons": [
+      "high-risk merchant category MONEY_TRANSFER",
+      "5 transactions in the preceding 24h",
+      "only 1.1 minutes since the previous transaction",
+      "occurred at 04:00, outside normal activity hours"
+    ],
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.7044534412955465,
+      "autoencoder": 0.8775303643724697,
+      "fused": 0.7412618083670716
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 725.85,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "MOBILE_APP",
+      "status": "SUCCESS",
+      "merchant_category": "MONEY_TRANSFER",
+      "merchant_country": "IN",
+      "merchant_city": "Chennai",
+      "device_type": "ANDROID",
+      "is_new_device": false,
+      "auth_method": "OTP",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 4.2,
+      "time_since_prev_txn_mins": 1.11,
+      "txn_count_last_24h": 5,
+      "txn_count_last_7d": 5,
+      "amount_to_account_avg_ratio": 0.255,
+      "balance_after_txn": 7661.56,
+      "transaction_hour": 4,
+      "is_weekend": true,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "HIGH_RISK_MCC",
+      "NIGHT_SHIFT",
+      "VELOCITY_BURST"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "merchant_category": {
+        "from": "TRAVEL",
+        "to": "MONEY_TRANSFER"
+      },
+      "transaction_timestamp": {
+        "from": "2026-06-28 15:01:39",
+        "to": "2026-06-28 04:01:39"
+      },
+      "txn_count_last_24h": {
+        "from": 0,
+        "to": 5
+      },
+      "transaction_hour": {
+        "from": 15,
+        "to": 4
+      },
+      "merchant_id": {
+        "from": "MER_6393",
+        "to": null
+      },
+      "merchant_name": {
+        "from": "IRCTC Rail",
+        "to": null
+      },
+      "txn_count_last_7d": {
+        "from": 0,
+        "to": 5
+      },
+      "time_since_prev_txn_mins": {
+        "from": 96313.87,
+        "to": 1.11
+      }
+    },
+    "justification": "The transaction is classified as fraud due to the high-risk merchant category of MONEY_TRANSFER, the occurrence of 5 transactions within the last 24 hours, and the timing at 04:00, which is outside of normal activity hours, indicating suspicious behavior.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_005",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "merchant is in NG, outside the customer's home country",
+      "card physically present 9,723 km from home",
+      "5 transactions in the preceding 24h",
+      "only 2.2 minutes since the previous transaction",
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.9166666666666666,
+      "iforest": 0.9159919028340081,
+      "autoencoder": 0.9807692307692307,
+      "fused": 0.9356950067476383
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 1685.7,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "ELECTRONICS",
+      "merchant_country": "NG",
+      "merchant_city": "Lagos",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": true,
+      "is_foreign_transaction": true,
+      "distance_from_home_km": 9722.7,
+      "time_since_prev_txn_mins": 2.16,
+      "txn_count_last_24h": 5,
+      "txn_count_last_7d": 5,
+      "amount_to_account_avg_ratio": 0.069,
+      "balance_after_txn": 61828.09,
+      "transaction_hour": 13,
+      "is_weekend": false,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "GOLD",
+      "cust_risk_rating": "MEDIUM",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "GEO_IMPOSSIBLE",
+      "AUTH_STRIPPED",
+      "VELOCITY_BURST"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "is_foreign_transaction": {
+        "from": false,
+        "to": true
+      },
+      "txn_count_last_24h": {
+        "from": 1,
+        "to": 5
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "merchant_id": {
+        "from": "MER_1438",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 0.071,
+        "to": 0.069
+      },
+      "merchant_name": {
+        "from": "Reliance Digital",
+        "to": null
+      },
+      "txn_count_last_7d": {
+        "from": 1,
+        "to": 5
+      },
+      "auth_method": {
+        "from": "PIN",
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "merchant_city": {
+        "from": "Mysuru",
+        "to": "Lagos"
+      },
+      "distance_from_home_km": {
+        "from": 1.9,
+        "to": 9722.7
+      },
+      "merchant_country": {
+        "from": "IN",
+        "to": "NG"
+      },
+      "time_since_prev_txn_mins": {
+        "from": 162.0,
+        "to": 2.16
+      }
+    },
+    "justification": "The transaction is classified as fraud due to the combination of being conducted in Nigeria, a foreign country, with the card present 9,723 km from the customer's home, the use of a new device, and multiple transactions occurring within a very short time frame, indicating suspicious activity.",
+    "confidence": 0.95,
+    "split": "valid"
+  },
+  {
+    "synthetic_id": "SYN_F_006",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "merchant is in RO, outside the customer's home country",
+      "card physically present 8,640 km from home",
+      "occurred at 04:00, outside normal activity hours",
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.8663967611336032,
+      "autoencoder": 0.8582995951417004,
+      "fused": 0.7840755735492577
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 47.48,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "RESTAURANT",
+      "merchant_country": "RO",
+      "merchant_city": "Bucharest",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": true,
+      "is_foreign_transaction": true,
+      "distance_from_home_km": 8639.9,
+      "time_since_prev_txn_mins": 58677.43,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.045,
+      "balance_after_txn": 38297.44,
+      "transaction_hour": 4,
+      "is_weekend": true,
+      "acc_account_type": "SALARY",
+      "acc_account_tier": "BASIC",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "AUTH_STRIPPED",
+      "NIGHT_SHIFT",
+      "GEO_IMPOSSIBLE"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "is_foreign_transaction": {
+        "from": false,
+        "to": true
+      },
+      "transaction_timestamp": {
+        "from": "2026-08-30 13:07:06",
+        "to": "2026-08-30 04:07:06"
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "transaction_hour": {
+        "from": 13,
+        "to": 4
+      },
+      "merchant_id": {
+        "from": "MER_5795",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 0.033,
+        "to": 0.045
+      },
+      "merchant_name": {
+        "from": "Cafe Coffee Day",
+        "to": null
+      },
+      "auth_method": {
+        "from": "SIGNATURE",
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "merchant_city": {
+        "from": "Coimbatore",
+        "to": "Bucharest"
+      },
+      "distance_from_home_km": {
+        "from": 2.1,
+        "to": 8639.9
+      },
+      "merchant_country": {
+        "from": "IN",
+        "to": "RO"
+      }
+    },
+    "justification": "The transaction is classified as fraud due to it being a purchase made at a restaurant in Romania, which is 8,639.9 km from the customer's home, using a new device at an unusual hour of 4:00 AM, and the card was physically present in a foreign country, indicating suspicious activity.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_007",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ],
+    "rule_reasons": [
+      "no authentication on a 300,319 INR transaction",
+      "amount is 387x the account average",
+      "occurred at 03:00, outside normal activity hours",
+      "initiated from a device not seen before",
+      "drove the account balance negative"
+    ],
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.9635627530364372,
+      "autoencoder": 0.9979757085020243,
+      "fused": 0.8884615384615384
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 300318.56,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "MOBILE_APP",
+      "status": "SUCCESS",
+      "merchant_category": "TRAVEL",
+      "merchant_country": "IN",
+      "merchant_city": "Chandigarh",
+      "device_type": "IOS",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 14.3,
+      "time_since_prev_txn_mins": 54.0,
+      "txn_count_last_24h": 1,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 386.601,
+      "balance_after_txn": -279108.72,
+      "transaction_hour": 3,
+      "is_weekend": true,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "AMOUNT_ESCALATION",
+      "NIGHT_SHIFT",
+      "AUTH_STRIPPED"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "transaction_timestamp": {
+        "from": "2026-08-09 18:52:03",
+        "to": "2026-08-09 03:52:03"
+      },
+      "transaction_hour": {
+        "from": 18,
+        "to": 3
+      },
+      "merchant_id": {
+        "from": "MER_6393",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 3.562,
+        "to": 386.601
+      },
+      "merchant_name": {
+        "from": "IRCTC Rail",
+        "to": null
+      },
+      "auth_method": {
+        "from": "OTP",
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "balance_after_txn": {
+        "from": 19522.82,
+        "to": -279108.72
+      },
+      "amount": {
+        "from": 1687.02,
+        "to": 300318.56
+      }
+    },
+    "justification": "The transaction is classified as fraud due to the lack of authentication on a large purchase of 300,318.56 INR from a new device, which is 387 times the account's average transaction amount, occurred at an unusual hour of 3 AM, and resulted in a negative account balance.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_008",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ],
+    "rule_reasons": [
+      "high-risk merchant category MONEY_TRANSFER",
+      "6 transactions in the preceding 24h",
+      "only 2.5 minutes since the previous transaction",
+      "occurred at 03:00, outside normal activity hours"
+    ],
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.7024291497975709,
+      "autoencoder": 0.9807692307692307,
+      "fused": 0.7716261808367071
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 2637.13,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "MONEY_TRANSFER",
+      "merchant_country": "IN",
+      "merchant_city": "Chandigarh",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "NONE",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 179.2,
+      "time_since_prev_txn_mins": 2.45,
+      "txn_count_last_24h": 6,
+      "txn_count_last_7d": 6,
+      "amount_to_account_avg_ratio": 1.867,
+      "balance_after_txn": 1889.6,
+      "transaction_hour": 3,
+      "is_weekend": false,
+      "acc_account_type": "NRE",
+      "acc_account_tier": "BASIC",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "VELOCITY_BURST",
+      "NIGHT_SHIFT",
+      "HIGH_RISK_MCC"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "merchant_category": {
+        "from": "FUEL",
+        "to": "MONEY_TRANSFER"
+      },
+      "transaction_timestamp": {
+        "from": "2026-07-31 17:32:31",
+        "to": "2026-07-31 03:32:31"
+      },
+      "txn_count_last_24h": {
+        "from": 2,
+        "to": 6
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "transaction_hour": {
+        "from": 17,
+        "to": 3
+      },
+      "merchant_id": {
+        "from": "MER_3441",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 0.465,
+        "to": 1.867
+      },
+      "merchant_name": {
+        "from": "Indian Oil Petrol",
+        "to": null
+      },
+      "txn_count_last_7d": {
+        "from": 2,
+        "to": 6
+      },
+      "time_since_prev_txn_mins": {
+        "from": 56.0,
+        "to": 2.45
+      }
+    },
+    "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (03:00), a high-risk merchant category (MONEY_TRANSFER), and the fact that it was the sixth transaction within a 24-hour period, with only 2.45 minutes since the last transaction, indicating suspicious activity.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_009",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ],
+    "rule_reasons": [
+      "merchant is in PA, outside the customer's home country",
+      "no authentication on a 750,975 INR transaction",
+      "amount is 137x the account average",
+      "card physically present 17,071 km from home",
+      "initiated from a device not seen before",
+      "drove the account balance negative"
+    ],
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9848178137651822,
+      "autoencoder": 1.0,
+      "fused": 0.9954453441295548
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 750974.54,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "ELECTRONICS",
+      "merchant_country": "PA",
+      "merchant_city": "Panama City",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": true,
+      "is_foreign_transaction": true,
+      "distance_from_home_km": 17070.6,
+      "time_since_prev_txn_mins": 3812.23,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 2,
+      "amount_to_account_avg_ratio": 136.687,
+      "balance_after_txn": -712143.33,
+      "transaction_hour": 6,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "BASIC",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "GEO_IMPOSSIBLE",
+      "AUTH_STRIPPED",
+      "AMOUNT_ESCALATION"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "is_foreign_transaction": {
+        "from": false,
+        "to": true
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "merchant_id": {
+        "from": "MER_1412",
+        "to": null
+      },
+      "amount_to_account_avg_ratio": {
+        "from": 1.197,
+        "to": 136.687
+      },
+      "merchant_name": {
+        "from": "Croma Electronics",
+        "to": null
+      },
+      "auth_method": {
+        "from": "PIN",
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "merchant_city": {
+        "from": "Indore",
+        "to": "Panama City"
+      },
+      "balance_after_txn": {
+        "from": 32044.12,
+        "to": -712143.33
+      },
+      "distance_from_home_km": {
+        "from": 1.5,
+        "to": 17070.6
+      },
+      "amount": {
+        "from": 6787.09,
+        "to": 750974.54
+      },
+      "merchant_country": {
+        "from": "IN",
+        "to": "PA"
+      }
+    },
+    "justification": "The transaction is classified as fraud due to its high value of 750,974.54 INR, lack of authentication, occurrence from a new device 17,070.6 km from the customer's home in a foreign country, and resulting in a negative account balance, all of which are significant red flags.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_F_010",
+    "kind": "counterfactual_fraud",
+    "is_fraud": true,
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "high-risk merchant category GAMBLING",
+      "occurred at 03:00, outside normal activity hours",
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.4089068825910931,
+      "autoencoder": 0.9676113360323887,
+      "fused": 0.5796221322537112
+    },
+    "triaged": true,
+    "payload": {
+      "amount": 606.46,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "merchant_category": "GAMBLING",
+      "merchant_country": "IN",
+      "merchant_city": "Indore",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "NONE",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 1.7,
+      "time_since_prev_txn_mins": 60896.02,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.012,
+      "balance_after_txn": 90289.89,
+      "transaction_hour": 3,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "GOLD",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "recipes": [
+      "HIGH_RISK_MCC",
+      "AUTH_STRIPPED",
+      "NIGHT_SHIFT"
+    ],
+    "factual_scores": null,
+    "diff": {
+      "merchant_category": {
+        "from": "HEALTHCARE",
+        "to": "GAMBLING"
+      },
+      "transaction_timestamp": {
+        "from": "2026-09-14 20:52:00",
+        "to": "2026-09-14 03:52:00"
+      },
+      "ip_address": {
+        "from": null,
+        "to": NaN
+      },
+      "transaction_hour": {
+        "from": 20,
+        "to": 3
+      },
+      "merchant_id": {
+        "from": "MER_6188",
+        "to": null
+      },
+      "merchant_name": {
+        "from": "Apollo Pharmacy",
+        "to": null
+      },
+      "auth_method": {
+        "from": "PIN",
+        "to": "NONE"
+      },
+      "is_new_device": {
+        "from": false,
+        "to": true
+      },
+      "status": {
+        "from": null,
+        "to": NaN
+      }
+    },
+    "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (3:00 AM), the use of a new device, and the high-risk gambling merchant category, which collectively indicate suspicious activity.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_001",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.011133603238866396,
+      "autoencoder": 0.25809716599190285,
+      "fused": 0.08076923076923077
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 1615.32,
+      "currency": "INR",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "ENTERTAINMENT",
+      "merchant_country": "IN",
+      "merchant_city": "Jaipur",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 0.9,
+      "time_since_prev_txn_mins": 5650.17,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 0.715,
+      "balance_after_txn": 15706.57,
+      "transaction_hour": 18,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction of INR 1615.32 was made at a local entertainment merchant in Jaipur using a verified card with a low risk rating, and all transaction parameters, including being a card-present transaction and the absence of any detector findings, support that it is legitimate and not fraudulent.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_002",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.010121457489878543,
+      "autoencoder": 0.4139676113360324,
+      "fused": 0.12722672064777327
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 340.78,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "TRANSPORT",
+      "merchant_country": "IN",
+      "merchant_city": "Chandigarh",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 11.5,
+      "time_since_prev_txn_mins": 16907.87,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.1,
+      "balance_after_txn": 1855.37,
+      "transaction_hour": 23,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction of 340.78 INR for a transport purchase in Chandigarh was successful, made with a verified account and a low-risk rating, with no detected anomalies, indicating it is legitimate.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_003",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.33805668016194335,
+      "autoencoder": 0.5819838056680162,
+      "fused": 0.27601214574898786
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 923.44,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "TRANSPORT",
+      "merchant_country": "IN",
+      "merchant_city": "Chennai",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "SIGNATURE",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 9.3,
+      "time_since_prev_txn_mins": 54135.03,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.27,
+      "balance_after_txn": 42382.53,
+      "transaction_hour": 18,
+      "is_weekend": true,
+      "acc_account_type": "CREDIT_CARD",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is classified as NOT FRAUD because it was a successful purchase made in-person at a local transport merchant, with the customer having a verified KYC status, low risk rating, and no detected anomalies in the transaction data.",
+    "confidence": 0.95,
+    "split": "valid"
+  },
+  {
+    "synthetic_id": "SYN_N_004",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.12651821862348178,
+      "autoencoder": 0.06275303643724696,
+      "fused": 0.056781376518218615
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 4510.13,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "ONLINE",
+      "status": "SUCCESS",
+      "merchant_category": "ECOMMERCE",
+      "merchant_country": "IN",
+      "merchant_city": "Indore",
+      "device_type": "ANDROID",
+      "is_new_device": false,
+      "auth_method": "OTP",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 12.0,
+      "time_since_prev_txn_mins": 54426.97,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.925,
+      "balance_after_txn": 7554.81,
+      "transaction_hour": 17,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "BASIC",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction of 4510.13 INR was a legitimate online purchase made from a verified account with a low risk rating, no anomalies detected, and within a reasonable distance from the customer's home, indicating it is not fraudulent.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_005",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.1720647773279352,
+      "autoencoder": 0.6933198380566802,
+      "fused": 0.25961538461538464
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 237.8,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "TRANSPORT",
+      "merchant_country": "IN",
+      "merchant_city": "Mumbai",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 5.5,
+      "time_since_prev_txn_mins": 67991.83,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.149,
+      "balance_after_txn": 3808.95,
+      "transaction_hour": 9,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "BASIC",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction of 237.8 INR for a purchase at a transport merchant in Mumbai was completed successfully with the card present, a low customer risk rating, and no anomalies detected, indicating it is a legitimate transaction.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_006",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.6710526315789473,
+      "autoencoder": 0.23481781376518218,
+      "fused": 0.27176113360323884
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 3259.72,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "MOBILE_APP",
+      "status": "SUCCESS",
+      "merchant_category": "ECOMMERCE",
+      "merchant_country": "IN",
+      "merchant_city": "Chennai",
+      "device_type": "IOS",
+      "is_new_device": false,
+      "auth_method": "CVV",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 1.0,
+      "time_since_prev_txn_mins": 4904.07,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 3,
+      "amount_to_account_avg_ratio": 0.255,
+      "balance_after_txn": 88612.36,
+      "transaction_hour": 15,
+      "is_weekend": true,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "GOLD",
+      "cust_risk_rating": "MEDIUM",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is classified as NOT FRAUD because it was a successful purchase made from a known device in close proximity to the user's home, with no unusual transaction patterns or anomalies detected.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_007",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.06376518218623482,
+      "autoencoder": 0.7884615384615384,
+      "fused": 0.255668016194332
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 517.04,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "status": "SUCCESS",
+      "merchant_category": "GROCERY",
+      "merchant_country": "IN",
+      "merchant_city": "Kolkata",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 8.8,
+      "time_since_prev_txn_mins": 386.0,
+      "txn_count_last_24h": 1,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 0.522,
+      "balance_after_txn": 45311.76,
+      "transaction_hour": 21,
+      "is_weekend": false,
+      "acc_account_type": "SALARY",
+      "acc_account_tier": "BASIC",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction of 517.04 INR for a grocery purchase in Kolkata was successful, made with a verified account using a familiar device, and showed no signs of fraud as indicated by the detector findings and low anomaly percentiles.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_008",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.10020242914979757,
+      "autoencoder": 0.28846153846153844,
+      "fused": 0.1165991902834008
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 468.0,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "GROCERY",
+      "merchant_country": "IN",
+      "merchant_city": "Pune",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "SIGNATURE",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 391.9,
+      "time_since_prev_txn_mins": 36827.2,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.088,
+      "balance_after_txn": 61685.72,
+      "transaction_hour": 12,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "BASIC",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction was a legitimate grocery purchase made in person with a verified account, and there were no detector findings indicating fraud, supporting the conclusion that it is not fraudulent.",
+    "confidence": 0.95,
+    "split": "valid"
+  },
+  {
+    "synthetic_id": "SYN_N_009",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.4817813765182186,
+      "autoencoder": 0.4959514170040486,
+      "fused": 0.29331983805668016
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 5741.14,
+      "currency": "INR",
+      "transaction_type": "WITHDRAWAL",
+      "channel": "ATM",
+      "status": "SUCCESS",
+      "merchant_category": "ATM_WITHDRAWAL",
+      "merchant_country": "IN",
+      "merchant_city": "Mysuru",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 8.0,
+      "time_since_prev_txn_mins": 62019.82,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.874,
+      "balance_after_txn": 7126.58,
+      "transaction_hour": 20,
+      "is_weekend": false,
+      "acc_account_type": "SALARY",
+      "acc_account_tier": "BASIC",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction was a legitimate ATM withdrawal of INR 5741.14 made with a verified account using a PIN on a device that was not new, and it occurred within a reasonable distance from home with no prior transactions in the last 24 hours, indicating normal behavior.",
+    "confidence": 0.95,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_N_010",
+    "kind": "clean_negative",
+    "is_fraud": false,
+    "rule_codes": [],
+    "rule_reasons": [],
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.20647773279352227,
+      "autoencoder": 0.19534412955465588,
+      "fused": 0.12054655870445344
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 635.37,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "status": "SUCCESS",
+      "merchant_category": "ENTERTAINMENT",
+      "merchant_country": "IN",
+      "merchant_city": "Hyderabad",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 1.4,
+      "time_since_prev_txn_mins": 8822.1,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 0.054,
+      "balance_after_txn": 1894.37,
+      "transaction_hour": 17,
+      "is_weekend": true,
+      "acc_account_type": "SALARY",
+      "acc_account_tier": "PLATINUM",
+      "cust_risk_rating": "MEDIUM",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction of 635.37 INR for entertainment in Hyderabad was successful, made with a verified account using a familiar device, and occurred within a reasonable distance from home, indicating no fraudulent activity.",
+    "confidence": 0.95,
+    "split": "valid"
+  },
+  {
+    "synthetic_id": "SYN_M_001",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.47469635627530365,
+      "autoencoder": 0.4625506072874494,
+      "fused": 0.31450742240215923
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 1298.86,
+      "currency": "INR",
+      "transaction_type": "PAYMENT",
+      "status": "SUCCESS",
+      "merchant_category": "P2P_TRANSFER",
+      "merchant_country": "IN",
+      "merchant_city": "Ahmedabad",
+      "is_new_device": true,
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 8.4,
+      "time_since_prev_txn_mins": 22927.93,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 0.348,
+      "balance_after_txn": 89584.62,
+      "transaction_hour": 9,
+      "is_weekend": false,
+      "acc_account_type": "CREDIT_CARD",
+      "acc_account_tier": "GOLD",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is classified as NOT FRAUD because it was a successful P2P transfer made from a new device but occurred within a reasonable distance from home, with a low customer risk rating and verified KYC status indicating legitimacy.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_002",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "occurred at 01:00, outside normal activity hours",
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.20242914979757085,
+      "autoencoder": 0.9686234817813765,
+      "fused": 0.41798245614035084
+    },
+    "triaged": false,
+    "payload": {
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "RESTAURANT",
+      "merchant_country": "IN",
+      "merchant_city": "Indore",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 2.7,
+      "time_since_prev_txn_mins": 317.0,
+      "txn_count_last_24h": 1,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 0.008,
+      "balance_after_txn": 3722.6,
+      "transaction_hour": 1,
+      "is_weekend": false,
+      "acc_account_type": "SALARY",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is not considered fraud because it was a legitimate purchase at a restaurant made in person with a PIN from a new device, and the customer's risk rating is low with verified KYC status, despite occurring outside normal hours.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_003",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "BALANCE_NEGATIVE"
+    ],
+    "rule_reasons": [
+      "drove the account balance negative"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.21761133603238866,
+      "autoencoder": 0.8279352226720648,
+      "fused": 0.3469973009446693
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 753.51,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "REVERSED",
+      "merchant_category": "TRANSPORT",
+      "merchant_country": "IN",
+      "merchant_city": "Mumbai",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 2.3,
+      "time_since_prev_txn_mins": 361.0,
+      "txn_count_last_24h": 1,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 0.113,
+      "balance_after_txn": -13732.92,
+      "transaction_hour": 15,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "BASIC",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction was reversed, indicating that it was not completed and thus does not constitute fraud despite the negative account balance, and all other factors such as the low customer risk rating and verified KYC status support this conclusion.",
+    "confidence": 0.9,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_004",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ],
+    "rule_reasons": [
+      "initiated from a device not seen before",
+      "customer carries a HIGH internal risk rating"
+    ],
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.12449392712550607,
+      "autoencoder": 0.22773279352226722,
+      "fused": 0.17233468286099865
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 1729.36,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "FUEL",
+      "merchant_country": "IN",
+      "merchant_city": "Hyderabad",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 1.0,
+      "time_since_prev_txn_mins": 241.0,
+      "txn_count_last_24h": 1,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 0.809,
+      "balance_after_txn": 47150.01,
+      "transaction_hour": 16,
+      "is_weekend": true,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "GOLD",
+      "cust_risk_rating": "HIGH",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is not considered fraud because it was a legitimate purchase at a fuel merchant in Hyderabad, made in person with a PIN on a new device, and the customer's verified KYC status and balance indicate sufficient legitimacy despite the high internal risk rating.",
+    "confidence": 0.85,
+    "split": "valid"
+  },
+  {
+    "synthetic_id": "SYN_M_005",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8805668016194332,
+      "autoencoder": 0.3562753036437247,
+      "fused": 0.40438596491228074
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 9028.6,
+      "currency": "INR",
+      "transaction_type": "WITHDRAWAL",
+      "channel": "ATM",
+      "status": "SUCCESS",
+      "merchant_category": "ATM_WITHDRAWAL",
+      "merchant_country": "IN",
+      "merchant_city": "Bengaluru",
+      "device_type": "ATM_MACHINE",
+      "is_new_device": true,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 6.4,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "balance_after_txn": 10530.16,
+      "transaction_hour": 12,
+      "is_weekend": false,
+      "acc_account_type": "CREDIT_CARD",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "MEDIUM",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is not considered fraud because it was a successful ATM withdrawal made with a card present, using a verified PIN, and the account had sufficient balance, despite being initiated from a new device.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_006",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.28441295546558704,
+      "autoencoder": 0.28441295546558704,
+      "fused": 0.20398110661268554
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 30446.9,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "JEWELLERY",
+      "merchant_country": "IN",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "auth_method": "SIGNATURE",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 3.0,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "balance_after_txn": 3958.36,
+      "transaction_hour": 20,
+      "is_weekend": false,
+      "acc_account_type": "SALARY",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is classified as NOT FRAUD because it was a legitimate purchase at a local jewellery store, made with a card present at a POS terminal, and the customer has a verified KYC status with a low risk rating despite using a new device.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_007",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.008097165991902834,
+      "autoencoder": 0.46356275303643724,
+      "fused": 0.17483130904183536
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 946.81,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "FUEL",
+      "merchant_country": "IN",
+      "merchant_city": "Chandigarh",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": true,
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 9.2,
+      "time_since_prev_txn_mins": 238.0,
+      "txn_count_last_24h": 1,
+      "txn_count_last_7d": 1,
+      "amount_to_account_avg_ratio": 1.071,
+      "balance_after_txn": 9390.85,
+      "transaction_hour": 23,
+      "is_weekend": false,
+      "acc_account_type": "SAVINGS",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is not considered fraud because it was a legitimate purchase at a fuel merchant in Chandigarh, with the card present and a low customer risk rating, despite being initiated from a new device.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_008",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ],
+    "rule_reasons": [
+      "occurred at 02:00, outside normal activity hours"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.770242914979757,
+      "autoencoder": 0.6204453441295547,
+      "fused": 0.45053981106612684
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 2743.05,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "MOBILE_APP",
+      "status": "SUCCESS",
+      "merchant_category": "TRAVEL",
+      "merchant_country": "IN",
+      "merchant_city": "Noida",
+      "device_type": "ANDROID",
+      "is_new_device": false,
+      "auth_method": "3DS",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 105.4,
+      "time_since_prev_txn_mins": 306.0,
+      "txn_count_last_24h": 2,
+      "txn_count_last_7d": 2,
+      "amount_to_account_avg_ratio": 0.463,
+      "balance_after_txn": 68287.67,
+      "transaction_hour": 2,
+      "is_weekend": true,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "PLATINUM",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction is classified as NOT FRAUD because it was a legitimate purchase made by a verified customer with a low risk rating, and despite occurring at an unusual hour, the transaction amount and frequency align with the customer's typical behavior and account status.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_009",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "NEW_DEVICE"
+    ],
+    "rule_reasons": [
+      "initiated from a device not seen before"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8441295546558705,
+      "autoencoder": 0.7165991902834008,
+      "fused": 0.5015519568151147
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 2191.58,
+      "currency": "INR",
+      "transaction_type": "TRANSFER",
+      "channel": "INTERNET_BANKING",
+      "status": "SUCCESS",
+      "merchant_category": "P2P_TRANSFER",
+      "merchant_country": "IN",
+      "merchant_city": "Delhi",
+      "device_type": "IOS",
+      "is_new_device": true,
+      "auth_method": "PIN",
+      "is_card_present": false,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 9.8,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "balance_after_txn": 81591.44,
+      "transaction_hour": 9,
+      "is_weekend": false,
+      "acc_account_tier": "GOLD",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "VERIFIED"
+    },
+    "justification": "The transaction was a successful P2P transfer initiated from a new device, but the customer has a verified KYC status, a low risk rating, and a substantial account balance, indicating that the transaction is legitimate despite the anomaly of using a new device.",
+    "confidence": 0.85,
+    "split": "train"
+  },
+  {
+    "synthetic_id": "SYN_M_010",
+    "kind": "near_miss_negative",
+    "is_fraud": false,
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ],
+    "rule_reasons": [
+      "customer KYC status is PENDING"
+    ],
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.46963562753036436,
+      "autoencoder": 0.7419028340080972,
+      "fused": 0.3967948717948718
+    },
+    "triaged": false,
+    "payload": {
+      "amount": 5270.33,
+      "currency": "INR",
+      "transaction_type": "PURCHASE",
+      "channel": "POS",
+      "status": "SUCCESS",
+      "merchant_category": "HEALTHCARE",
+      "merchant_country": "IN",
+      "merchant_city": "Noida",
+      "device_type": "POS_TERMINAL",
+      "is_new_device": false,
+      "auth_method": "PIN",
+      "is_card_present": true,
+      "is_foreign_transaction": false,
+      "distance_from_home_km": 6.9,
+      "time_since_prev_txn_mins": 72480.87,
+      "txn_count_last_24h": 0,
+      "txn_count_last_7d": 0,
+      "amount_to_account_avg_ratio": 1.917,
+      "balance_after_txn": 14654.13,
+      "transaction_hour": 8,
+      "is_weekend": false,
+      "acc_account_type": "CURRENT",
+      "acc_account_tier": "SILVER",
+      "cust_risk_rating": "LOW",
+      "cust_kyc_status": "PENDING"
+    },
+    "justification": "The transaction is classified as NOT FRAUD because it was a legitimate purchase at a healthcare merchant in Noida, made in person with a PIN on a known device, and the customer has a low risk rating despite their KYC status being pending.",
+    "confidence": 0.9,
+    "split": "train"
+  }
+]

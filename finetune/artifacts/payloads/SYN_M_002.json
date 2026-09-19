@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_M_002",
+  "kind": "near_miss_negative",
+  "is_fraud": false,
+  "outbound_prompt": "Correct verdict: NOT FRAUD\n\nDe-identified transaction facts:\n- currency: INR\n- transaction_type: PURCHASE\n- channel: POS\n- status: SUCCESS\n- merchant_category: RESTAURANT\n- merchant_country: IN\n- merchant_city: Indore\n- device_type: POS_TERMINAL\n- is_new_device: True\n- auth_method: PIN\n- is_card_present: True\n- is_foreign_transaction: False\n- distance_from_home_km: 2.7\n- time_since_prev_txn_mins: 317.0\n- txn_count_last_24h: 1\n- txn_count_last_7d: 1\n- amount_to_account_avg_ratio: 0.008\n- balance_after_txn: 3722.6\n- transaction_hour: 1\n- is_weekend: False\n- acc_account_type: SALARY\n- acc_account_tier: SILVER\n- cust_risk_rating: LOW\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- occurred at 01:00, outside normal activity hours\n- initiated from a device not seen before\n\nAnomaly percentiles: rule 0.17, isolation forest 0.20, autoencoder 0.97, combined 0.42\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

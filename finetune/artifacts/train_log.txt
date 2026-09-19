@@ -1,0 +1,70 @@
+Loading pretrained model
+
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]
+Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 2547.92it/s]
+Loading datasets
+Training
+Trainable parameters: 0.114% (1.409M/1235.814M)
+Starting training..., iters: 60
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:01,  1.49s/it]
+Calculating loss...: 2it [00:02,  1.26s/it]
+Calculating loss...: 3it [00:03,  1.17s/it]
+Calculating loss...: 3it [00:03,  1.22s/it]
+Iter 1: Val loss 2.806, Val took 3.683s
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:01,  1.06s/it]
+Calculating loss...: 2it [00:02,  1.03s/it]
+Calculating loss...: 3it [00:03,  1.08s/it]
+Calculating loss...: 3it [00:03,  1.07s/it]
+Iter 10: Val loss 1.005, Val took 3.213s
+Iter 10: Train loss 1.303, Learning Rate 1.000e-04, It/sec 0.507, Tokens/sec 74.398, Trained Tokens 1467, Peak mem 3.533 GB
+Iter 10: Saved adapter weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors and /Users/psamarth/datapipeline/finetune/artifacts/adapters/0000010_adapters.safetensors.
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:00,  1.44it/s]
+Calculating loss...: 2it [00:01,  1.29it/s]
+Calculating loss...: 3it [00:02,  1.26it/s]
+Calculating loss...: 3it [00:02,  1.28it/s]
+Iter 20: Val loss 0.945, Val took 2.351s
+Iter 20: Train loss 0.554, Learning Rate 1.000e-04, It/sec 0.725, Tokens/sec 99.013, Trained Tokens 2833, Peak mem 3.539 GB
+Iter 20: Saved adapter weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors and /Users/psamarth/datapipeline/finetune/artifacts/adapters/0000020_adapters.safetensors.
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:00,  1.33it/s]
+Calculating loss...: 2it [00:01,  1.19it/s]
+Calculating loss...: 3it [00:02,  1.16it/s]
+Calculating loss...: 3it [00:02,  1.18it/s]
+Iter 30: Val loss 1.044, Val took 2.551s
+Iter 30: Train loss 0.313, Learning Rate 1.000e-04, It/sec 0.718, Tokens/sec 109.519, Trained Tokens 4359, Peak mem 3.539 GB
+Iter 30: Saved adapter weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors and /Users/psamarth/datapipeline/finetune/artifacts/adapters/0000030_adapters.safetensors.
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:00,  1.20it/s]
+Calculating loss...: 2it [00:01,  1.31it/s]
+Calculating loss...: 3it [00:02,  1.25it/s]
+Calculating loss...: 3it [00:02,  1.25it/s]
+Iter 40: Val loss 1.036, Val took 2.399s
+Iter 40: Train loss 0.230, Learning Rate 1.000e-04, It/sec 0.748, Tokens/sec 103.699, Trained Tokens 5746, Peak mem 3.539 GB
+Iter 40: Saved adapter weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors and /Users/psamarth/datapipeline/finetune/artifacts/adapters/0000040_adapters.safetensors.
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:00,  1.12it/s]
+Calculating loss...: 2it [00:01,  1.23it/s]
+Calculating loss...: 3it [00:02,  1.20it/s]
+Calculating loss...: 3it [00:02,  1.19it/s]
+Iter 50: Val loss 0.956, Val took 2.517s
+Iter 50: Train loss 0.180, Learning Rate 1.000e-04, It/sec 0.721, Tokens/sec 102.900, Trained Tokens 7174, Peak mem 3.562 GB
+Iter 50: Saved adapter weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors and /Users/psamarth/datapipeline/finetune/artifacts/adapters/0000050_adapters.safetensors.
+
+Calculating loss...: 0it [00:00, ?it/s]
+Calculating loss...: 1it [00:00,  1.08it/s]
+Calculating loss...: 2it [00:01,  1.13it/s]
+Calculating loss...: 3it [00:02,  1.21it/s]
+Calculating loss...: 3it [00:02,  1.18it/s]
+Iter 60: Val loss 1.029, Val took 2.542s
+Iter 60: Train loss 0.123, Learning Rate 1.000e-04, It/sec 0.695, Tokens/sec 100.563, Trained Tokens 8620, Peak mem 3.562 GB
+Iter 60: Saved adapter weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors and /Users/psamarth/datapipeline/finetune/artifacts/adapters/0000060_adapters.safetensors.
+Saved final weights to /Users/psamarth/datapipeline/finetune/artifacts/adapters/adapters.safetensors.

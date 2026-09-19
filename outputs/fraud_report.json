@@ -1,0 +1,51 @@
+{
+  "disclaimer": "This dataset has no ground-truth fraud label. Figures below describe the detector's own behaviour -- score distributions, detector agreement, throughput -- not correctness. The only labelled data in this project is the fine-tune set, whose labels are constructed by counterfactual intervention (see finetune/).",
+  "scores": {
+    "n": 988,
+    "triaged": 153,
+    "flagged_fraud": 141,
+    "hard_rule": 35,
+    "injection_suspected": 0,
+    "verdict_source": {
+      "deterministic_below_threshold": 835,
+      "slm": 153
+    },
+    "fused_quantiles": {
+      "p50": 0.3452,
+      "p75": 0.4985,
+      "p85": 0.5725,
+      "p95": 0.7473,
+      "p99": 0.8947
+    }
+  },
+  "detector_agreement": {
+    "spearman": {
+      "rule_score": {
+        "rule_score": 1.0,
+        "iforest_score": 0.481,
+        "autoencoder_score": 0.334
+      },
+      "iforest_score": {
+        "rule_score": 0.481,
+        "iforest_score": 1.0,
+        "autoencoder_score": 0.483
+      },
+      "autoencoder_score": {
+        "rule_score": 0.334,
+        "iforest_score": 0.483,
+        "autoencoder_score": 1.0
+      }
+    },
+    "max_offdiagonal": 0.483
+  },
+  "slm": {
+    "slm_calls": 153,
+    "slm_failures": 0,
+    "fallbacks": 0,
+    "raw_json_invalid": 0,
+    "slm_latency_s": 97.00154733657837,
+    "rule_slm_conflicts": 5,
+    "mean_latency_s": 0.634,
+    "raw_json_validity": 1.0
+  }
+}

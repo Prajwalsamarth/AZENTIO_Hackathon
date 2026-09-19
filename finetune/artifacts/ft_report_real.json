@@ -1,0 +1,1186 @@
+{
+  "n_real_triaged": 153,
+  "base": {
+    "n": 153,
+    "raw_json_validity": 0.085,
+    "verdict_justification_coherence": 0.4615,
+    "label_agreement": 0.0,
+    "mean_latency_s": 0.58,
+    "verdicts": [
+      {
+        "id": "TXN_0000588",
+        "is_fraud": false,
+        "confidence": 0.8,
+        "justification": "The initiated transaction from an unknown device, combined with the expired KYC status of the customer, drove the verdict of fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000282",
+        "is_fraud": false,
+        "confidence": 0.57,
+        "justification": "The transaction's high amount (102x the account average), combined with the device type (Android) and the lack of device history, drove this verdict.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000387",
+        "is_fraud": false,
+        "confidence": 0.81,
+        "justification": "The transaction is likely a bank fraud due to the merchant category being MONEY_TRANSFER, the customer carrying a HIGH internal risk rating, and the KYC status being PENDING.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000324",
+        "is_fraud": false,
+        "confidence": 0.8,
+        "justification": "The combination of the merchant being in a foreign country, the large negative account balance, and the 3 transactions in the preceding 24h drove the verdict.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000794",
+        "is_fraud": false,
+        "confidence": 0.84,
+        "justification": "The presence of a high-value transaction, the physical presence of the card, and the negative account balance all contribute to a high likelihood of fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000566",
+        "is_fraud": false,
+        "confidence": 0.62,
+        "justification": "The combination of the transaction time, the fact that the customer's KYC status is expired, and the fact that the transaction occurred outside normal activity hours drove this verdict.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000458",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The fact that the device is not recognized by the device type and new device flag is a strong indication of a potential fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000063",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The initiated from a device not seen before, and the account balance was negative.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000594",
+        "is_fraud": false,
+        "confidence": 0.65,
+        "justification": "The transaction amount is 2.19x the account average, and the customer's high risk rating.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000257",
+        "is_fraud": false,
+        "confidence": 0.9,
+        "justification": "The customer's purchase amount is 71 times their account average, and their account has a high internal risk rating, both of which are suspicious indicators.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000412",
+        "is_fraud": false,
+        "confidence": 0.97,
+        "justification": "The transaction amount exceeds the merchant city distance, and the number of transactions exceeds the merchant city distance, which are both anomalies that drive the verdict.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000116",
+        "is_fraud": false,
+        "confidence": 0.93,
+        "justification": "The combination of the card being physically present in a remote location and the device not being seen before, along with the fact that the transaction was successful, led me to conclude that this transaction was fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000321",
+        "is_fraud": false,
+        "confidence": 0.8,
+        "justification": "The combination of an unknown KYC status and a device not seen before raises significant red flags for potential fraud.",
+        "expected": null
+      }
+    ],
+    "discrimination": {
+      "(0.0, 0.6]": {
+        "n": 5,
+        "fraud_rate": 0.0
+      },
+      "(0.6, 0.7]": {
+        "n": 6,
+        "fraud_rate": 0.0
+      },
+      "(0.7, 0.8]": {
+        "n": 1,
+        "fraud_rate": 0.0
+      },
+      "(0.8, 1.0]": {
+        "n": 1,
+        "fraud_rate": 0.0
+      },
+      "_gradient": 0.0
+    }
+  },
+  "tuned": {
+    "n": 153,
+    "raw_json_validity": 0.9673,
+    "verdict_justification_coherence": 0.8514,
+    "label_agreement": 0.0,
+    "mean_latency_s": 0.697,
+    "verdicts": [
+      {
+        "id": "TXN_0000974",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 22,574.7 INR was a legitimate purchase made from a local jewelry store in Mysuru, with the customer's risk rating and KYC status indicating suspicious behavior, and the customer's age and risk rating suggesting suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000588",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 736.65 INR was a failed mobile app transfer initiated from a new device, made from a customer's old device, with a KYC status of EXPIRED, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000440",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 33,700.39 INR was a legitimate online purchase made from a foreign merchant in the Philippines, with the customer's risk rating and KYC status in line with the merchant's profile, indicating that the transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000394",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 28,370.95 INR was a legitimate online purchase made from a high-risk merchant in Russia, with the customer carrying a high internal risk rating and being politically exposed, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000806",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 51,534.87 INR was a legitimate online purchase made from a known device in the city of Pune, with a low customer risk rating and a verified KYC status, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000042",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 44.08 INR was a legitimate online purchase made from a foreign merchant in Russia, with the customer's risk rating and KYC status in line with typical behavior for such transactions, indicating that the transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000957",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2556.62 INR was a legitimate online purchase made from a local entertainment merchant in Mumbai, with the customer's risk rating of 0.85 and a KYC status of 0.85, indicating that the customer is not considered exposed, and the card was physically present 906.1 km from the customer's home, with a customer KYC status of 0.85, and a customer risk rating of 0.85, all of which are legitimate factors in this transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000143",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 38,193.9 INR was a legitimate online purchase made from a foreign merchant in a foreign country, made from a new device, with a customer risk rating of HIGH, a KYC status of PENDING, and a customer made from a foreign country, using a foreign device, with a customer made from a foreign country, using a foreign merchant, and a customer made from a foreign country, using a foreign device, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000108",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1,383.84 INR was a legitimate online purchase made from a foreign country, with the customer's home city of Chennai and a distance from home of 10,250.6 km, indicating that the customer is physically present in a foreign country, which is a common scenario for foreign transactions.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000087",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a legitimate online purchase made from a new device in Dubai, made with a customer KYC status of PENDING, and a customer risk rating of MEDIUM, indicating that the customer is not considered exposed, using a detector finding score of 0.85, which is 0.85% of the total anomaly percentiles, indicating that this transaction is not considered fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000494",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 265.10 INR was a legitimate online purchase made from a transport merchant in Hyderabad, with the customer present and a low transaction frequency, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000297",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 15,418.15 INR was a legitimate online purchase made from a Chandigarh-based travel merchant, with a balance of 961.46 INR, a distance from home of 196.9 km, and a low anomaly score of 0.85%, indicating it is a typical transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000528",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 239.58 INR was a purchase made from a restaurant in Manila, with the card present, a distance from home of 11,188.3 km, and a negative account balance, all of which are significant red flags.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000459",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2,392.9 km from the customer's home in Lagos, occurred at an unusual hour of 2:00 AM, and was a high-risk merchant category transaction, occurred within a timeframe of 18,648.45 minutes since the previous transaction, and resulted in a negative account balance, was completed by a verified customer with a low-risk rating, indicating that the transaction is not considered fraud despite the negative account balance, and all other factors such as the occurrence of the transaction at an unusual hour, the high-risk merchant category, and the negative account balance, all support that the transaction is legitimate.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000282",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 19,251.51 INR was a successful transfer initiated from a new device, 2.9 km from the customer's home in Mumbai, with a customer risk rating of medium, a customer age of 44, and a verified KYC status, all of which are significant red flags, indicating fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000173",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 110,329.47 INR was a legitimate online purchase made from a known merchant in a local city, made at an unusual hour, with a customer carrying a high risk rating, and a KYC status that has not been updated in 6 months, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000468",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 4110.84 INR was a WITHDRAWAL made from a new device, with a customer having a low risk rating, a home in Chandigarh, and a verified KYC status, all of which are significant red flags for fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000006",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 9,924.08 INR was a successful ATM withdrawal made from a foreign country, with a physical presence of 7,333.2 km from the customer's home, and a card present in 48-year-old Chandigarh, with a risk rating of MEDIUM, using a merchant in Russia with a risk rating of MEDIUM, and a detector finding score of 0.85, indicating it is not considered fraud despite all these factors.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000532",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1414.05 INR was a purchase made from a gambling merchant in Indore, with a customer risk rating of HIGH, a customer carries a HIGH internal risk rating, and a detector finding score of 0.85, indicating that the transaction is not considered fraud, but rather legitimate, with a probability of 0.85.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000985",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1649.92 INR was a legitimate online purchase made from a new device, with a customer risk rating of LOW, a KYC status of PENDING, and a customer home city of Noida, indicating that it is a typical online purchase, with no anomalies detected.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000353",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 53.54 INR was a legitimate online purchase made from a foreign device in Romania, with the customer's risk rating as LOW, and the occurrence of the transaction at an unusual hour of 4:00 AM, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000437",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 35,071.3 INR was a legitimate online purchase made from a foreign merchant in Nigeria, made from a new device, with a customer risk rating of low, a customer home city of Delhi, and a customer age of 21, indicating that the customer is not considered high-risk, and the customer has a verified KYC status, with a low risk rating, and a customer home city that is not exposed to political risks, using a detector finding score of 0.85, which is the lowest among all transactions, indicating that this transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000821",
+        "is_fraud": false,
+        "confidence": 0.5,
+        "justification": "The transaction of 1,014.73 INR was a legitimate online purchase made from a fuel merchant in Nigeria, with the customer's physical presence 10,308.8 km from their home in Ahmedabad, and the use of a new device, all of which are factually supported by the transaction's detector findings, indicating that this transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000546",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 193.13 INR was a legitimate online purchase made from a restaurant in the United States, made at a foreign terminal in the customer's home country, and occurred at an unusual hour, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000390",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 8,486.52 INR was a legitimate online purchase made from a gambling merchant in Delhi, with a customer risk rating of HIGH, a KYC status of PENDING, and a customer carrying a HIGH internal risk rating, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000204",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 1490.74 INR was a purchase made from a gambling merchant in Pune, made with a high-risk rating and a significant deviation from the account's average value, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000462",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 62,146.26 INR was a successful transfer made from a foreign merchant in Romania, with a negative account balance, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000908",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction of 2,314.96 INR was a legitimate online purchase made from a known device in Kolkata, made within the last 24 hours, with a low customer risk rating, a verified KYC status, and a low occurrence rate of transactions at an unusual hour of 4:00 AM, indicating it is a typical online purchase.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000243",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 007166.00 was a legitimate online purchase made from a new device at a transport merchant in Jaipur, with a customer having a low-risk rating, a verified KYC status, and a balance of 3236244.4 INR, with no anomalies detected.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000872",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 11,963.95 INR was a legitimate online purchase made from a gambling merchant in Kolkata, with the customer's risk rating and KYC status indicating suspicious behavior, and all detector findings and anomaly percentiles align with known fraud patterns, indicating that the transaction is not fraud but rather fraud detection.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000387",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 11,176.00 INR was reversed, made by a merchant in Dubai, with a high-risk merchant category of MONEY_TRANSFER, and a customer with a high internal risk rating, whose KYC status is PENDING, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000373",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a legitimate online purchase made from a verified account with a low-risk rating, a distance from home of 16.3 km, and a customer in Chennai, with no anomalies detected.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000324",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 9,726.28 INR was a purchase made from a foreign merchant in the UK, made just 3 transactions in the last 24 hours, and the account's negative balance was a result of the 3 transactions in the preceding 24 hours, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000723",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 13.44 INR was a legitimate online purchase made from a new device, a low-risk merchant category of GIFT_CARD, and a customer from Delhi, with a low customer risk rating, a verified KYC status, and a low customer age, indicating it is a legitimate online purchase.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000794",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 41,677.41 INR was a purchase made from a jewerly merchant in a foreign country, with the account balance being 16,715.59 INR, indicating that the account was in debt, and the card present was a physical presence 530.6 km from the customer's home, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000179",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 26,978.99 INR was a successful purchase made from a new device at a local electronics merchant in Dubai, made with a high-risk rating and a pending KYC status, occurred at an unusual hour of 2:00 AM, and was a physical presence 4,972.0 km from the customer's home, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000669",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 14,460.36 INR was a legitimate online purchase made from a verified account with a low customer risk rating, a common occurrence in the cryptocurrency market, indicating that the transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000217",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 4,928.88 INR was a legitimate online purchase made from a low-risk merchant category in Jaipur, made at an unusual hour of 2:00 AM, with a customer KYC status of PENDING, and a high value of 197 times the account's average, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000352",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 39.5 INR for a purchase at a foreign merchant in a foreign country was completed at an unusual hour of 4:00 AM, occurred just 1.6 minutes after the previous transaction, and was a relatively minor transaction with a low occurrence rate, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000443",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 63,866.44 INR was a purchase made from a new device, initiated from a new device, and the account's balance was negative, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000702",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 26,953.17 INR was a successful transfer made from a high-risk merchant category of MONEY_TRANSFER to a customer with a low risk rating, using a device from a foreign country, with a significant distance from home, and a negative account balance, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000320",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to the occurrence of a foreign transaction from a new device, a negative account balance, and the merchant's presence in a foreign country, all of which are significant red flags.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000566",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 0.00 INR for a travel purchase in Chennai was completed with a card present status, a low customer risk rating, and a occurred at an unusual hour, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000938",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 5,897.65 INR was a legitimate online purchase made from a high-risk merchant category of CryptoXchange Global, with a customer carrying a high internal risk rating, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000720",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 0.00 INR was a successful payment made from a foreign country, with the customer's risk rating of 0.85 (LOW) and a low customer risk rating rating, indicating that the transaction is legitimate.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000408",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1,000.00 INR for a purchase at Croma Electronics in Ahmedabad was completed, made with a card present, a new device, and a low customer risk rating, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000079",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 705.3 INR was a legitimate online purchase made from a transport merchant in the UK, with the customer's risk rating of 32 indicating high internal risk, and the card present at a distance of 2,780.8 km from the customer's home in Jaipur, with the customer's risk rating and the card present physical presence, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000598",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 5404.11 INR was a legitimate online purchase made from a foreign merchant in the United States, made from a new device 3666.3 km from the customer's home in Ahmedabad, made with a physical card present 80,388.4 minutes after the previous transaction, and a card present status 100% with a low risk rating, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000659",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 69,838.23 INR was a successful transfer made from a new device, a low-risk merchant category, and a foreign country, to a customer in Pune, with a negative account balance, occurred at an unusual hour, and was a new device, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000176",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 213,707.14 INR was a gambling debt of 56,058.31 INR, made from a new device 9,183.7 km from the customer's home in Kyiv, with a customer risk rating of 84,127.96 and a KYC status of 77,794.81, indicating suspicious gambling activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000861",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2,351.8 INR was a legitimate online purchase made from a fuel merchant in the United States, made at an unusual hour of 0:00, and the customer has a low-risk rating, indicating it is not considered fraud despite occurring outside of normal hours and the physical presence of the card 4,485.8 km from the customer's home, and the card present 4,485.8 km from the customer's home, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000797",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 19,561.6 INR for a purchase in Kolkata was completed, made with a new device, and a low-risk rating, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000448",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 9858.81 INR was a legitimate online purchase made from a healthcare merchant in the United States, with the customer's physical presence 1702.7 km from their home in Chandigarh, and the use of a new device, all of which are factually supported and thus is a NOT FRAUD transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000591",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 15,721.03 INR was a successful transfer made from a new device, a low-risk merchant category of MONEY_TRANSFER, and occurred at an unusual hour of 4:00 AM, with the use of a new device, a low-risk device, and a low-risk merchant category, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000318",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction of 4,218.6 INR was a legitimate online purchase made from a known device in Chennai, made within a reasonable timeframe, with a low customer risk rating, and a verified KYC status, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000236",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 27,725.91 INR was a legitimate purchase made from a foreign merchant in a foreign country, with the card present at a distance of 1,843.1 km from the customer's home, and a balance of 239,193.86 INR, which is 27.7 times the account's account's average balance, indicating that the transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000361",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 1500.00 INR was a purchase made from a foreign merchant in Singapore, with a customer carrying a high risk rating and a KYC status pending, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000728",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 165,247.58 INR was a purchase made from Tanishq Jewellers in Pune, with a customer having a risk rating of LOW, a KYC status of EXPIRED, and a customer age of 22, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000852",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 98,935.74 INR was a purchase made from a Chandigarh-based jeweler, with a negative account balance of 39,171.76 INR, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000660",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 148,099.83 INR was a MONEY_TRANSFER made from a foreign country (PH) to a foreign merchant (MONEY_TRANSFER) with a low-risk rating, occurred at an unusual hour (05:00), and resulted in a negative account balance, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000158",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction of 15.91 INR was a legitimate online purchase made from a foreign merchant in Russia, with the customer's risk rating as low as 0.8%, a reasonable level for a foreign transaction in the customer's home country, and a low customer risk rating, indicating that the transaction is not considered fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000969",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 80.07 INR was a legitimate online purchase made from a local Kirana Store in India, with the card present in person, a reasonable distance from the customer's home, and a low customer risk rating, indicating that it is a typical transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000350",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as NOT FRAUD because it was a legitimate purchase made from a foreign merchant in a foreign country, with a low customer risk rating and verified KYC status, and the occurrence of the transaction within a short time frame (0.4 minutes since the previous one) and at an unusual hour (4:00 AM), indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000740",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 57,969.49 INR was a successful online purchase made from a new device, a foreign merchant in a foreign country, and a high-risk merchant category, occurred at an unusual hour, and was a card-present transaction, indicating it is not considered fraud despite the high value of the purchase, and all other factors such as the customer's risk rating and the transaction's frequency align with the transaction's likelihood of being legitimate.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000970",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The customer's high internal risk rating of 53 years was a significant red flag, indicating suspicious behavior, and the fact that the customer has a verified KYC status and a high risk rating, further supports that this transaction is not legitimate.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000914",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1,000.00 INR for a jewelry purchase in Jakarta was completed with the card present in a foreign country, a distance from home of 5,753.2 km, and a customer risk rating of 0.85, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000255",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a legitimate online purchase made from a local Kirana Store in Dubai, with the customer's risk rating of 30 indicating a high level of internal risk, and the card present at a distance of 6,521.5 km from the customer's home, all of which is a reasonable and not fraudulent transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000090",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 63,761.74 INR was a card-present purchase made from a new device at a local jewellery store in Noida, made with a PIN on a new device, occurred at an unusual hour of 5:00 AM, and the account was a non-existent account in the account master, indicating it is a fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000458",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a successful P2P transfer initiated from a new device, but the customer's risk rating is medium, indicating that it is not considered high-risk, and the customer has a verified KYC status, which is a good sign, but the anomaly detection models all score 0.85, which is the lowest, indicating that this transaction is not unusual.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000063",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 38,882.25 INR was a successful transfer initiated from a new device, made to a customer in Chennai, with a negative account balance, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000779",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 80,930.9 INR was a successful P2P transfer initiated at 05:00, made from a foreign country (Azerbaijan), with 3 transactions in the last 24 hours, and occurred at an unusual hour of 5:00, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000601",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 13,906.97 INR was a successful payment made from a new device, a customer with a high internal risk rating, and a customer whose KYC status is pending, all of which are significant red flags for fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000253",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 15,000.00 INR was a successful transfer made from a new device, a gambling merchant in Indonesia, to a customer in Mumbai, with a high-risk rating, occurred at an unusual hour, and was a verified KYC status, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000348",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 49.05 INR was a legitimate online purchase made from a new device, a foreign merchant in Ukraine, with a low customer risk rating, a verified KYC status, and occurred at an unusual hour, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000933",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 14,334.62 INR was a WITH!just a card present, but a card present in a foreign country, and a card present in a foreign country with a customer carrying a HIGH internal risk rating, and a customer politically exposed, all occurred within 953.7 km of the customer's home, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000157",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 29.13 INR for a purchase at Amazon India was completed with a card present status, a low customer risk rating, and a verified KYC status, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000281",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2,180.71 INR was a legitimate online purchase made from a foreign merchant in the customer's home country, with the occurrence of the transaction at an unusual hour of 1:00 AM, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000355",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 8.66 INR was a legitimate online purchase made from a known device in Mumbai, with a low customer risk rating and verified KYC status, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000730",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 4610.77 INR was a successful ATM withdrawal made from a foreign country, with the card present at a distance of 7,082.8 km from the customer's home, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000868",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 31,886.18 INR was a successful online purchase made from a new device, a high-risk merchant category of MONEY_TRANSFER, and occurred at an unusual hour of 3:00 AM, with a customer having a rejected KYC status, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000594",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 16,671.3 INR was a transfer initiated from a new device, with a customer carrying a high internal risk rating, and was a foreign transaction, with a customer's home city of Mysuru, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000824",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1409.9 INR was a legitimate online purchase made from a known device in the city of Ahmedabad, with the customer's risk rating and KYC status in order, indicating that the transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000643",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 8,294.23 INR was a successful ATM withdrawal made from a new device 864.1 km from the customer's home in Bengaluru, made at an unusual hour of 01:00, and the customer has a low risk rating, indicating that it is not considered fraud despite the anomaly of the card's physical presence 864.1 km from the customer's home in Indore, using a new device 864.1 km from the customer's home in Bengaluru, and the customer has a verified KYC status, using a new device 864.1 km from the customer's home in Indore, and the customer has a low risk rating, using a new device 864.1 km from the customer's home in Bengal!r.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000973",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 586.62 INR was a legitimate purchase made from a local restaurant in Ahmedabad, with the customer's risk rating and KYC status in line with the typical behavior of a customer with a high risk rating and an expired KYC status, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000410",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 32,607.29 INR was a legitimate online purchase made from a foreign merchant in a distant city, with the card present and a reasonable distance from home, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000228",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 616,242.43 INR was a gambling finance transfer initiated from a new device, occurred at an unusual hour of 3:00 AM, and was a negative account balance, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000336",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 13,004.7 INR was a legitimate online purchase made from a high-risk merchant category in Hyderabad, with a customer carrying a high internal risk rating, and a KYC status of PENDING, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000777",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (4:00 AM), the use of a new device, and the occurrence of a card-present-less transaction, all of which are red flags for fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000386",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (4:00 AM), the use of a new device, the customer's high-risk merchant category of MONEY_TRANSFER, and the customer's KYC status of PENDING, all of which are significant red flags.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000257",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1767.82 INR was a legitimate online purchase made from a known device in Mysuru, with a customer risk rating of HIGH, a customer carried a HIGH internal risk rating, and a customer carried a HIGH risk rating, indicating that the customer was not exposed to any politically exposed individuals, and that the customer's risk rating was a significant factor in determining the transaction's validity, thus, the transaction is classified as NOT FRAUD because it was a legitimate online purchase made from a known device in Mysuru, with a customer risk rating of HIGH, a customer carried a HIGH internal risk rating, and a customer carried a HIGH risk rating, indicating that the customer was not exposed to any politically exposed individuals, and that the customer's risk rating was a significant factor in determining the transaction's validity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000442",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 741.16 INR was a successful payment initiated from a new device, a Android, in Kochi, with a customer carrying a high internal risk rating, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000400",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 5808.05 INR was a legitimate online purchase made from a known device in Bengaluru, with a low customer risk rating and verified KYC status, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000302",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 351.97 INR was a legitimate online purchase made from a new device, with a customer risk rating of HIGH, a KYC status of EXPIRED, and a customer home city of Pune, indicating that the customer is not considered high-risk, and the transaction was a successful online purchase.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000389",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 31,327.07 INR was a successful P2P transfer initiated from Chandigarh, with a customer carrying a high internal risk rating, and a KYC status of PENDING, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000227",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 91,647.36 INR was a successful transfer made from a new device, a gambling merchant in Nigeria, to a customer in Kochi, with a customer risk rating of low, a verified KYC status, and a high-risk merchant category of gambling, occurring at an unusual hour of 2:00 AM, and was a balance after a transaction, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000686",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 56,348.96 INR was a legitimate online purchase made from a new device, with a customer risk rating of MEDIUM, a KYC status of VERIFIED, and a occurred time of 2:00 AM, all of which are factually true and do not indicate suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000156",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 21.49 INR was a legitimate online purchase made from a foreign merchant in the customer's home country, with the transaction occurring just 3 transactions in the last 24 hours, and the customer having a low risk rating, indicating that it is not considered fraud despite the occurrence of only 4.0 minutes since the previous transaction, and all other factors such as the card present status and the account status and balance, and the customer's location and age, and the merchant's category and country, and the detector findings, and the anomaly percentiles all support that this transaction is legitimate.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000245",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 997.5 INR was a legitimate online purchase made from a new device, a foreign country, with a customer in Noida, a 28-year-old with a low risk rating, and a KYC status that had expired, indicating that the customer was not new to the merchant's channel, and the customer's home city was not the customer's home, which is 5,539.9 km from the customer's home, and the customer's account had a low average transaction amount of 0.45 INR, and the customer's account had a low balance of 316,333.11 INR, and the customer's account status was 'ACTIVE', and the transaction was a foreign purchase, with a customer in a foreign country, using a new device, and a customer KYC status that had expired, indicating that the transaction is not considered fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000377",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 3,179.59 INR was a physical card present at a foreign merchant in Nigeria, 11,076.9 km from the customer's home in Chandigarh, and was a successful online purchase initiated from a new device, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000739",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 23,672.73 INR was a legitimate purchase made from a local electronics merchant in the United States, made within 6,262.1 km from the customer's home in Mumbai, with the card present and a low risk rating, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000146",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 20,775.57 INR was a legitimate online purchase made from a foreign electronics merchant in a foreign country, made with a high-risk rating and a pending KYC status, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000191",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 80.32 INR was a successful ATM withdrawal made from a foreign country, with a physical presence of 980.2 km from the customer's home in Mysuru, using a verified KYC status, a low customer risk rating, and a verified KYC status, indicating that it is not considered fraud despite the detector finding of a card physically present 980.2 km from the customer's home in Mysuru, using a verified KYC status, a low customer risk rating, and a verified KYC status, indicating that it is not considered fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000673",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 14,378.77 INR was a successful online money transfer made from a mobile app to a user in Gur! The transaction occurred at an unusual hour of 5:00 AM, and the occurrence of the transaction was accompanied by a high-risk merchant category of MONEY_TRANSFER, a high value of 62 times the account's average, and a timing anomaly of occurring at an unusual hour of 5:00 AM, all of which are significant red flags for fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000874",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a MONEY_TRANSFER made from a new device, a high-risk merchant category of MONEY_TRANSFER, and a customer with a customer risk rating of unknown, using a biometric authentication, a customer with a customer home city of Ahmedabad, and a customer with a customer age of 31, with a balance of 65,927.05 INR, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000461",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 95,027.54 INR was a successful transfer made from a new device, with the account balance falling by 282,181.92 INR, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000841",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 78,778.4 INR for a jewelry purchase in Noida was completed, made with a card present, a negative account balance, and a significant physical presence from the customer's home, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000412",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 14,943.27 INR for a purchase at Chandigarh was completed, made with a card present, a verified KYC status, and a low customer risk rating, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000882",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 16,882.96 INR was a legitimate purchase at a local electronics store in Bengaluru, made at an unusual hour of 1:06:00 AM, with a card present and a low customer risk rating, indicating it is a typical transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000531",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 50,048.01 INR was a legitimate online purchase made from a local jeweller, with the customer's risk rating of 43 and a low customer risk rating rating, indicating that the customer is not considered high-risk, thus is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000316",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 51,699.16 INR was a purchase made from Tanishq Jewellers, a jewelry merchant in Kochi, with a negative account balance of 27,356.71 INR, occurring at an unusual hour of 6:06:20 AM, and was a result of a detected frequency of 20.6 times the account's average balance, initiated from a new device, and occurred outside of normal activity hours, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000155",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 16.33 INR was a legitimate online purchase made from a foreign merchant in Singapore, with a low customer risk rating and verified KYC status, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000154",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 24.59 INR was a legitimate online purchase made from a foreign country, made within 0.8 minutes of the previous transaction, and a purchase from a new device, with a detector finding score of 0.73, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000674",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2,881.41 INR was a legitimate online purchase made from a new device, with a low customer risk rating and verified KYC status, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000292",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a successful P2! from a new device, initiated from a foreign device, and a verified KYC status, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000141",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 6,126.53 INR for a purchase in Chandigarh was a legitimate online banking transaction, made from a new device, with a low customer risk rating, a verified KYC status, and a low customer risk rating, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000780",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 3,236.5 INR was a successful ATM withdrawal made from a foreign country, with a customer having a low risk rating and a KYC status pending, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000605",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 39.7 times the account's average INR of 82,470.65 was completed from a foreign device 4,176.6 km from the customer's home in a foreign country, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000215",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a legitimate online purchase made from a healthcare merchant in Singapore, with the customer's risk rating and KYC status in line with the merchant's typical behavior, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000148",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 32,917.26 INR was a legitimate online purchase made from a foreign jewellery merchant in the United Arab Emirates, with the customer's risk rating and KYC status in line with the merchant's internal rating and status, indicating that this transaction is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000388",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 10,954.72 INR was a successful transfer made from a foreign merchant in Singapore, with a customer carrying a high internal risk rating, a pending KYC status, and a lack of authentication on a substantial amount of their savings account, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000710",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 14,205.86 INR was a legitimate online purchase made from a known device in close proximity to the user's home, with a low customer risk rating and verified KYC status, occurred at an unusual hour of 1:00 AM, and was a successful online transaction, with a low customer risk rating and a verified KYC status, indicating that it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000402",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 15,000.00 INR was a successful transfer made from a new device, a low-risk merchant category, and a foreign merchant, with the account's balance at -67,492.59, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000126",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1520.03 INR was a legitimate online purchase made from a foreign merchant in the customer's home country, with the card present in a foreign country, and occurred at an unusual hour, indicating suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000218",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 30,862.29 INR was a successful payment made from a new device, a customer with a high-risk merchant category of MONEY_TRANSFER, a customer with a high internal risk rating, and a KYC status of PENDING, occurred at an unusual hour of 3:00 AM, and the customer's home city of Jaipur, occurred within a short distance from home of 15.1 km, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000775",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 19,532.98 INR was a successful P2P transfer initiated at 3:00:17 AM, with a customer KYC status of REJECTED, and occurred from a MACOS device, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000175",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 36,054.8 INR was a legitimate purchase made from a foreign merchant in Romania, with the card present at a distance of 5,371.1 km from the customer's home, and a low risk rating, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000147",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 16,788.78 INR was a legitimate online purchase made from Croma Electronics, with a customer risk rating of HIGH and a KYC status of PENDING, indicating that the customer is not considered exposed, and the transaction amount and frequency align with the customer's typical behavior, indicating that this is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000397",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (4:00 AM), the use of a new device, and the high-risk merchant category of CRYPTO, which collectively indicate suspicious activity.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000053",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a gambling bet made from a new device, initiated from a new location, and a high-risk gambling merchant category, indicating it is not considered fraud despite the low-risk rating, and thus is NOT FRAUD.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000706",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 20,041.47 INR was a successful online purchase made from a foreign merchant in Hyderabad, with a distance from home of 1,159.0 km, a customer risk rating of unknown, and a customer home city of Indore, indicating suspicious behavior and a high likelihood of fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000351",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 45.63 INR was a legitimate online purchase made from a known device in the city of Mumbai, with a low customer risk rating and verified KYC status, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000718",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 12,398.61 INR was a legitimate online purchase made from a verified account with a low customer risk rating, a common occurrence in the insurance merchant's business, made from a familiar device, and a balance of 158,813.19 INR, which is 1.03 times the account's average balance, indicating that the customer has a low customer risk rating and a stable account, with no unusual transaction patterns or anomalies, indicating that it is a legitimate online purchase.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000428",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 58,095.64 INR for a purchase at Tanishq Jewellers in Coim! was a significant anomaly, as it was 115.24 times the account's average balance, a 38-year-old male with a low risk rating and verified KYC status, and a dormant account with a substantial balance, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000342",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1761.53 INR was a legitimate online purchase made from a foreign merchant in Singapore, with the card present at a distance of 3,091.3 km from the customer's home in Mysuru, and a low risk rating, indicating it is not fraudulent.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000741",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 19,978.09 INR was a legitimate online purchase made at a foreign merchant in Hyderabad, made with a verified KYC status and a low customer risk rating, occurred at an unusual hour of 3:00 AM, and was a successful online transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000524",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 48,721.11 INR was a successful transfer made from a new device, a new location, and a new time, with a customer having a high-risk merchant category of MONEY_TRANSFER, occurred at an unusual hour of 3:00 AM, and was a verified KYC status, with a customer having a risk rating of unknown, using a new device, and a new location, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000068",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 55,724.36 INR was reversed, made it a fraudulent transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000005",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 25.00 INR was a legitimate online purchase at a local electronics merchant in Bengaluru, made from a new device, with a card present, a typical transaction at an unusual hour, and a low customer risk rating, indicating it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000116",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 3,133.8 INR was a successful ATM withdrawal made from a new device, with a card present, a verified KYC status, and a customer from Kolkata, with a risk rating of unknown, indicating that it is not considered fraud despite the anomaly of a card present from 1,172.7 km from the customer's home in Mysuru, made with a new device, and a verified KYC status, using a detector finding score of 0.85, which is 0.85% of the total anomaly scores, indicating that it is not considered fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000557",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 153,338.82 INR was a successful transfer made from a new device, a foreign transaction, and occurred at an unusual hour, with the customer's risk rating and KYC status in line with the merchant's, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000572",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 4,728.14 INR was a legitimate online purchase made from a foreign merchant in the United States, made with a card present at a foreign terminal, a customer with a high risk rating, and a distance from the customer's home of 8,678.5 km, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000526",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 99,825.48 INR was a successful transfer made from a new device, with a high-risk merchant category of MONEY_TRANSFER, no authentication on the transaction, occurred at an unusual hour of 5:00 AM, and a reference to a non-existent account, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000615",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 9,702.25 INR was a legitimate online purchase made from a known device in close proximity to the user's home, with a low customer risk rating and no prior knowledge of the merchant's gambling activities, indicating it is not fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000321",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2,248.26 INR was a legitimate online purchase made from a Chandigarh-based BigBazaar Retail merchant, with a card present and a low customer risk rating, indicating that it is a legitimate transaction.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000460",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (3:00 AM), the use of a new device, and the occurrence of a negative account balance, all of which are significant red flags.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000863",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 16,773.43 INR was a legitimate online purchase made from a new device, a gambling merchant category, with a high-risk rating, occurred at an unusual hour, and was a successful transaction, made with a card present, and a balance after the transaction of 4,616.78 INR, with a low anomaly percentiles, indicating it is not considered fraud.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000354",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 44.68 INR for a Netflix subscription was a legitimate online purchase made at an hour when the system was not under heavy activity, with the transaction occurring at an unusual hour of 4:00 AM, and the occurrence of 6 transactions within the last 24 hours, with only 1.5 minutes since the previous transaction, indicating suspicious behavior.",
+        "expected": null
+      },
+      {
+        "id": "TXN_0000362",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 24,681.56 INR was a purchase made from a foreign country (Romania) with a customer risk rating of HIGH, a KYC status of PENDING, and a customer age of 18, indicating suspicious behavior.",
+        "expected": null
+      }
+    ],
+    "discrimination": {
+      "(0.0, 0.6]": {
+        "n": 25,
+        "fraud_rate": 0.24
+      },
+      "(0.6, 0.7]": {
+        "n": 59,
+        "fraud_rate": 0.271
+      },
+      "(0.7, 0.8]": {
+        "n": 32,
+        "fraud_rate": 0.188
+      },
+      "(0.8, 1.0]": {
+        "n": 32,
+        "fraud_rate": 0.406
+      },
+      "_gradient": 0.218
+    }
+  }
+}

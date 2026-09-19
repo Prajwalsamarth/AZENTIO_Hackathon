@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_M_010",
+  "kind": "near_miss_negative",
+  "is_fraud": false,
+  "outbound_prompt": "Correct verdict: NOT FRAUD\n\nDe-identified transaction facts:\n- amount: 5270.33\n- currency: INR\n- transaction_type: PURCHASE\n- channel: POS\n- status: SUCCESS\n- merchant_category: HEALTHCARE\n- merchant_country: IN\n- merchant_city: Noida\n- device_type: POS_TERMINAL\n- is_new_device: False\n- auth_method: PIN\n- is_card_present: True\n- is_foreign_transaction: False\n- distance_from_home_km: 6.9\n- time_since_prev_txn_mins: 72480.87\n- txn_count_last_24h: 0\n- txn_count_last_7d: 0\n- amount_to_account_avg_ratio: 1.917\n- balance_after_txn: 14654.13\n- transaction_hour: 8\n- is_weekend: False\n- acc_account_type: CURRENT\n- acc_account_tier: SILVER\n- cust_risk_rating: LOW\n- cust_kyc_status: PENDING\n\nDetector findings:\n- customer KYC status is PENDING\n\nAnomaly percentiles: rule 0.08, isolation forest 0.47, autoencoder 0.74, combined 0.40\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

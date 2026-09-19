@@ -1,0 +1,242 @@
+{
+  "dataset": {
+    "n": 30
+  },
+  "base": {
+    "n": 30,
+    "raw_json_validity": 0.0667,
+    "verdict_justification_coherence": 0.5,
+    "label_agreement": 0.5,
+    "mean_latency_s": 0.598,
+    "verdicts": [
+      {
+        "id": "SYN_F_007",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction amount is 300,318.56, which is 387x the account average, and the account balance is negative, which drives the verdict.",
+        "expected": true
+      },
+      {
+        "id": "SYN_M_001",
+        "is_fraud": false,
+        "confidence": 0.8,
+        "justification": "The fact that the transaction was initiated from a device not seen before, combined with the device type being unknown, drives the verdict that this transaction is likely a bank fraud.",
+        "expected": false
+      }
+    ],
+    "discrimination": {}
+  },
+  "tuned": {
+    "n": 30,
+    "raw_json_validity": 0.9667,
+    "verdict_justification_coherence": 0.931,
+    "label_agreement": 0.7931,
+    "mean_latency_s": 0.654,
+    "verdicts": [
+      {
+        "id": "SYN_F_001",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1,012.76 INR was a legitimate online purchase made from a new device, with a low customer risk rating, a verified KYC status, and a low customer age, indicating it is not fraudulent.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_002",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 684,019.38 INR was a purchase initiated from a new device, with a low frequency of 5 transactions in the last 24 hours, and a timing from a new device, all of which are significant red flags for fraud.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_003",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (3:00 AM), the occurrence of a gambling merchant category, and the resulting in a negative account balance, all of which are significant red flags.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_004",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 725.85 INR was a legitimate online purchase made from a new device, a familiar merchant, and a familiar location, with the customer's risk rating and KYC status in order, and a low customer risk rating, indicating that it is not fraudulent.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_005",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1685.7 INR was a legitimate purchase made from a foreign merchant in Nigeria, with the customer's physical presence 9672.7 km from their home in Mysuru, and a timing of 2.2 minutes since the previous transaction, all of which is a reasonable and normal behavior.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_006",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction is classified as fraud due to its occurrence at an unusual hour (4:00 AM), the card's physical presence from 8,639.9 km from the customer's home in Romania, and the use of a new device, all of which are significant red flags.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_007",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 300,318.56 INR was a purchase made from a new device, with a low customer risk rating, a negative account balance, and occurred at an unusual hour, all of which are significant red flags for fraud.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_008",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2637.13 INR was a legitimate online purchase made from a Chandigarh-based merchant with a low-risk rating, a verified KYC status, and a history of 6 transactions within the last 24 hours, occurring at an unusual hour of 3:00 AM, with a timing from the previous transaction of 2.5 minutes, and a distance from home of 179.2 km, indicating suspicious behavior.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_009",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 750,974.54 INR was a purchase made from a device 17,070.6 km from the customer's home in a foreign country, with the account's balance 137 times the account's account's average, and the card present in a foreign country, indicating suspicious activity.",
+        "expected": true
+      },
+      {
+        "id": "SYN_F_010",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 6066.46 INR was a purchase made from a new device, a GAM!BING merchant category, occurred at an unusual hour of 3:00 AM, and was a card present transaction, with a high-risk rating and occurred within a reasonable distance from the customer's home, all of which is 0.95 (0.85 + 0.1) is the confidence level.",
+        "expected": true
+      },
+      {
+        "id": "SYN_N_001",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 1615.32 INR was a legitimate online purchase made from a local entertainment merchant in Jaipur, with no signs of fraud or deceit, indicating it is a typical transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_002",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 340.78 INR was a legitimate online purchase made from a Chandigarh-based transport merchant, with a low customer risk rating and no prior account status issues, indicating it is a legitimate transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_003",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 923.44 INR for a transport merchant in Chennai was a legitimate online purchase, made with a card present, a low-risk rating, and a reasonable account status, with no detected anomalies or suspicious transaction patterns, indicating it is a typical transaction for a customer with a low-risk rating and a transport merchant in Chennai, made with a card present, and a reasonable account status, with no detected anomalies or suspicious transaction patterns, indicating it is a typical transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_004",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 4510.13 INR was a legitimate online purchase made from a verified account with a low-risk rating, a dormant account with a low account balance, and a verified KYC status, made from the customer's home in Indore, with a reasonable distance from home, and a low customer risk rating, indicating it is a typical online purchase.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_005",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 237.8 INR was a legitimate online purchase made from a transport merchant in Mumbai, with a low customer risk rating and verified KYC status, indicating it is not fraudulent.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_006",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 2599.62 INR for a purchase in Chennai was completed with a low customer risk rating and a verified KYC status, indicating it is a legitimate transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_007",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 517.04 INR was a legitimate online grocery purchase made from a local store in Kolkata, made with a verified account using a familiar device, and the customer has a low risk rating, indicating that it is a typical transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_008",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 468.00 INR for a grocery purchase in a local store was completed with a card present status, a low customer risk rating, and a verified KYC status, indicating it is a legitimate transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_N_009",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 5741.14 INR was a successful ATM withdrawal made with a verified account using a familiar device, made just 62,019.82 minutes since the previous transaction, and showed no signs of fraud as indicated by its low customer risk rating and verified KYC status, indicating it is a legitimate transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_001",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a successful P2P transfer initiated from a new device, using a new device, with a low customer risk rating, and a verified KYC status, indicating it is not considered fraud despite the anomaly of using a new device.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_002",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 3,722.6 INR was a legitimate online purchase made from a new device, a familiar merchant, and a local customer, with no signs of fraud or suspicious activity, indicating it is a typical transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_003",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The transaction of 753.51 INR was a purchase made from a transport merchant in Mumbai, with a negative account balance, indicating suspicious activity.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_004",
+        "is_fraud": false,
+        "confidence": 0.95,
+        "justification": "The transaction of 7293.64 INR was a legitimate online purchase at a fuel merchant in Hyderabad, made from a new device, with a customer risk rating of HIGH, a KYC status of VERIFIED, and a customer home in Hyderabad, with a customer age of 53, using a high-risk rating, indicating it is not considered fraud.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_005",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a successful ATM withdrawal made from a new device, initiated from a new device, with a card present, a foreign transaction, and a low customer risk rating, indicating it is not considered fraud despite the anomaly of a new device being used.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_006",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a legitimate purchase at a local jewelry store made from a new device, with the customer's personal details and risk rating in line with industry norms, indicating it is not fraudulent.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_007",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a legitimate online purchase at a fuel merchant in Chandigarh, made from a new device, with a card present, a foreign transaction, and a low-risk rating, indicating it is not fraudulent.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_008",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction of 2,743.05 INR was a legitimate online purchase made from a known device in close proximity to the user's home, with a low customer risk rating and verified KYC status, occurred at an unusual hour of 2:00 AM, and was a successful online transaction.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_009",
+        "is_fraud": false,
+        "confidence": 0.85,
+        "justification": "The transaction was a successful P2P transfer initiated from a new device, with a low customer risk rating, and a verified KYC status, indicating it is not fraudulent.",
+        "expected": false
+      },
+      {
+        "id": "SYN_M_010",
+        "is_fraud": true,
+        "confidence": 0.95,
+        "justification": "The customer's KYC status is PENDING, indicating suspicious behavior, and the customer's age (49) and risk rating (LOW) are also red flags, suggesting that this transaction is not legitimate.",
+        "expected": false
+      }
+    ],
+    "discrimination": {}
+  }
+}

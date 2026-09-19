@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_F_005",
+  "kind": "counterfactual_fraud",
+  "is_fraud": true,
+  "outbound_prompt": "Correct verdict: FRAUD\n\nDe-identified transaction facts:\n- amount: 1685.7\n- currency: INR\n- transaction_type: PURCHASE\n- channel: POS\n- status: SUCCESS\n- merchant_category: ELECTRONICS\n- merchant_country: NG\n- merchant_city: Lagos\n- device_type: POS_TERMINAL\n- is_new_device: True\n- auth_method: NONE\n- is_card_present: True\n- is_foreign_transaction: True\n- distance_from_home_km: 9722.7\n- time_since_prev_txn_mins: 2.16\n- txn_count_last_24h: 5\n- txn_count_last_7d: 5\n- amount_to_account_avg_ratio: 0.069\n- balance_after_txn: 61828.09\n- transaction_hour: 13\n- is_weekend: False\n- acc_account_type: CURRENT\n- acc_account_tier: GOLD\n- cust_risk_rating: MEDIUM\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- merchant is in NG, outside the customer's home country\n- card physically present 9,723 km from home\n- 5 transactions in the preceding 24h\n- only 2.2 minutes since the previous transaction\n- initiated from a device not seen before\n\nAnomaly percentiles: rule 0.92, isolation forest 0.92, autoencoder 0.98, combined 0.94\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

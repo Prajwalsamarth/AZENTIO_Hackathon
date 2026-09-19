@@ -1,0 +1,5805 @@
+[
+  {
+    "transaction_id": "TXN_0000974",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 692 km from the customer's home city (Indore), the account balance went negative after the transaction, the customer has a HIGH risk rating, and their KYC status is EXPIRED, all of which indicate potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.7722672064777328,
+      "autoencoder": 0.6497975708502024,
+      "fused": 0.6266194331983805
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000588",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is expired, which are both suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.8825910931174089,
+      "autoencoder": 0.8259109311740891,
+      "fused": 0.579217273954116
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000440",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at a merchant in the Philippines (PH), which is outside the customer's home country (Delhi), and the anomaly model scores indicate a moderate to high level of unusualness (isolation forest: 0.74, autoencoder: 0.85, combined: 0.58)."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.742914979757085,
+      "autoencoder": 0.8461538461538461,
+      "fused": 0.5767206477732794
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000394",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO) located in Russia, a foreign country to the customer's home city (Jaipur), and the customer has a HIGH internal risk rating and is politically exposed, which are all suspicious factors."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9574898785425101,
+      "autoencoder": 0.9939271255060729,
+      "fused": 0.8520917678812414
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK",
+      "POLITICALLY_EXPOSED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000806",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO), the customer has a HIGH internal risk rating, and their KYC status is EXPIRED, all of which contribute to a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.8643724696356275,
+      "autoencoder": 0.8360323886639676,
+      "fused": 0.6767881241565452
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000042",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Russia (RU), 3,816 km from the customer's home city of Jaipur, with a HIGH risk rating and PENDING KYC status, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.840080971659919,
+      "autoencoder": 0.7368421052631579,
+      "fused": 0.7397435897435898
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000957",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 906 km away from the customer's home city (Noida), and the customer's KYC status is PENDING, which raises suspicion."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.5941295546558705,
+      "autoencoder": 0.9564777327935222,
+      "fused": 0.5985155195681511
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000143",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in AE, which is outside the customer's home country (India), was initiated from a new device, and the customer has a HIGH risk rating with PENDING KYC status, all of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.97165991902834,
+      "autoencoder": 0.9726720647773279,
+      "fused": 0.7832995951417003
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000108",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.94,
+      "justification": "The transaction occurred at a merchant in Nigeria (NG), 10,251 km from the customer's home city of Chennai, using a new device, and involved a foreign transaction, which are all highly unusual for this customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.9362348178137652,
+      "autoencoder": 0.8380566801619433,
+      "fused": 0.765620782726046
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000087",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in AE (Dubai), which is outside the customer's home country (Mumbai), the device used was new, and the customer's KYC status is PENDING, all of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.8997975708502024,
+      "autoencoder": 0.5647773279352226,
+      "fused": 0.6060391363022942
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000494",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred 1,104 km from the customer's home city (Mumbai), at an unusual time (05:00), and the amount is significantly below the account's average spending, which may indicate a fraudulent card use scenario."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.5860323886639676,
+      "autoencoder": 0.7651821862348178,
+      "fused": 0.6053643724696356
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "VELOCITY_24H",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000297",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 1.0,
+      "justification": "The transaction references an account that does not exist in the account master, which is a clear indicator of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9908906882591093,
+      "autoencoder": 0.6072874493927125,
+      "fused": 0.6127867746288799
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "ORPHAN_ACCOUNT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000528",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.92,
+      "justification": "The transaction occurred at a merchant in the Philippines, which is outside the customer's home country (Pune, India), and the card was used 11,188 km from the customer's home, which is highly unusual for a customer with a low risk rating and a verified KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.9453441295546559,
+      "autoencoder": 0.9625506072874493,
+      "fused": 0.8057017543859649
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000459",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 02:00, outside normal activity hours, involved a high-risk merchant category (CRYPTO) located in NG (outside the customer's home country), and drove the account balance negative, which is highly unusual for a customer with a LOW risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9827935222672065,
+      "autoencoder": 0.9959514170040485,
+      "fused": 0.8602901484480432
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000282",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 102 times the account average, and it was initiated from a new device, which are both highly unusual for this account."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8744939271255061,
+      "autoencoder": 0.569838056680162,
+      "fused": 0.5666329284750338
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000173",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 129x the account average, occurred at 00:00 (outside normal activity hours), and the customer has a HIGH internal risk rating and an EXPIRED KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.4493927125506073,
+      "autoencoder": 0.917004048582996,
+      "fused": 0.6099190283400809
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000468",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.94,
+      "justification": "The transaction amount is 152x the account average, initiated from a new device, and the customer is politically exposed, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.6751012145748988,
+      "autoencoder": 0.937246963562753,
+      "fused": 0.6503711201079623
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "NEW_DEVICE",
+      "POLITICALLY_EXPOSED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000006",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.99,
+      "justification": "The transaction occurred in Russia, which is outside the customer's home country, the amount withdrawn was 397 times the account's average, and the ATM was located 7,333 km from the customer's home city, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.9848178137651822,
+      "autoencoder": 0.9969635627530364,
+      "fused": 0.8945344129554655
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "AMOUNT_RATIO_EXTREME",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000532",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.8,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING) and the customer has a HIGH internal risk rating, which increases the likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8572874493927125,
+      "autoencoder": 0.861336032388664,
+      "fused": 0.6489203778677463
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000985",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is PENDING, which are both suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.944331983805668,
+      "autoencoder": 0.7975708502024291,
+      "fused": 0.5892375168690958
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000353",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.81,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, from a new device, and involved a merchant in Romania, which is outside the customer's home country (Mumbai), indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.951417004048583,
+      "autoencoder": 0.7591093117408907,
+      "fused": 0.8131578947368421
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000437",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Nigeria (NG), which is outside the customer's home country (Delhi), and was initiated from a new device, both of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9402834008097166,
+      "autoencoder": 0.9038461538461539,
+      "fused": 0.6865721997300944
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000821",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in Nigeria (NG), which is outside the customer's home country (India), and the card was used 10,309 km from the customer's home city (Ahmedabad), indicating a high-risk foreign transaction."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7975708502024291,
+      "autoencoder": 0.9493927125506073,
+      "fused": 0.7574224021592442
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000546",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Panama (PA), 8,820 km from the customer's home city of Chennai, at an unusual time (00:00), and involved a foreign transaction with a card present, which is highly unusual for the customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.7884615384615384,
+      "autoencoder": 0.7034412955465587,
+      "fused": 0.7475708502024292
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "VELOCITY_24H",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000390",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING), the customer has a HIGH internal risk rating, and their KYC status is PENDING, which collectively indicate a suspicious transaction."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.8259109311740891,
+      "autoencoder": 0.9089068825910931,
+      "fused": 0.6871120107962213
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000204",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING) and the amount is 57.35 times the account average, which is highly unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.8734817813765182,
+      "autoencoder": 0.9665991902834008,
+      "fused": 0.7520242914979757
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_EXTREME"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000040",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.98,
+      "justification": "The transaction amount is 208x the account average, occurred 818 km from the customer's home city, and was initiated from a new device, all of which are highly unusual for a low-risk customer with a verified KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7682186234817814,
+      "autoencoder": 0.9817813765182186,
+      "fused": 0.7583333333333333
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000462",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction involves a high-risk MONEY_TRANSFER to a merchant in Romania, a foreign transaction, and drove the account balance negative, which is highly unusual for a customer with a low risk rating and verified KYC."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.9878542510121457,
+      "autoencoder": 0.840080971659919,
+      "fused": 0.8483805668016194
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000908",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, and the anomaly model scores (isolation forest: 0.90, autoencoder: 0.90) indicate a high likelihood of being unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.9048582995951417,
+      "autoencoder": 0.8977732793522267,
+      "fused": 0.5741228070175439
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000243",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, was initiated from a new device, and the customer's KYC status is EXPIRED, all of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.8593117408906883,
+      "autoencoder": 0.7155870445344129,
+      "fused": 0.5724696356275304
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000872",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING), a customer with a HIGH internal risk rating, and the customer is politically exposed, which increases the likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.7176113360323887,
+      "autoencoder": 0.9281376518218624,
+      "fused": 0.660391363022942
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK",
+      "POLITICALLY_EXPOSED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000387",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.81,
+      "justification": "The transaction involves a high-risk MONEY_TRANSFER to a merchant in AE, a foreign location, and the customer has a HIGH risk rating and PENDING KYC status, which are all suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.958502024291498,
+      "autoencoder": 0.8512145748987854,
+      "fused": 0.8095816464237516
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000373",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 05:00, outside normal activity hours, involved a high-risk merchant category (GIFT_CARD), and the anomaly model scores (especially the autoencoder at 0.96) indicate a highly unusual transaction pattern."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.7641700404858299,
+      "autoencoder": 0.9554655870445344,
+      "fused": 0.7158906882591094
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000324",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at a merchant in GB, which is outside the customer's home country (Mysuru), and the account balance was driven negative, indicating a potentially unusual and risky transaction."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.7348178137651822,
+      "autoencoder": 0.7682186234817814,
+      "fused": 0.650910931174089
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "VELOCITY_24H",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000723",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is flagged as suspicious due to the high-risk merchant category (GIFT_CARD) and the use of a new device, which are both unusual for a customer with a low risk rating and verified KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6103238866396761,
+      "autoencoder": 0.9251012145748988,
+      "fused": 0.5939608636977058
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000793",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in AE (Dubai), which is outside the customer's home country (Mumbai), and the card was used 3,856 km from home, indicating a foreign transaction that is highly unusual for this customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.8582995951417004,
+      "autoencoder": 0.8491902834008097,
+      "fused": 0.7789136302294197
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "VELOCITY_24H"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000794",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction lacks authentication for a high-value purchase (41,677 INR) made 531 km from the customer's home city (Kochi), and it drove the account balance negative, which is highly unusual for a customer with a low risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.5546558704453441,
+      "autoencoder": 0.840080971659919,
+      "fused": 0.6517543859649123
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "IMPOSSIBLE_TRAVEL",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000179",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in AE (Dubai), 4,972 km from the customer's home city of Jaipur, at an unusual time (02:47), using a new device, and the customer has a HIGH risk rating and PENDING KYC status, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.8333333333333334,
+      "iforest": 0.9321862348178138,
+      "autoencoder": 0.8208502024291497,
+      "fused": 0.8592442645074224
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000669",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO), occurred within a short time frame (17 minutes after the previous transaction), and is part of 3 transactions in the preceding 24 hours, which are all indicators of potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.604251012145749,
+      "autoencoder": 0.9827935222672065,
+      "fused": 0.6427800269905533
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000217",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO), an amount 197x the account average, occurred at 02:00 (outside normal activity hours), and the customer has a PENDING KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9655870445344129,
+      "autoencoder": 0.9898785425101214,
+      "fused": 0.8533063427800269
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000352",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in Panama (PA), which is outside the customer's home country (India), and took place at 04:00, which is outside normal activity hours, while also occurring only 1.6 minutes after the previous transaction, indicating unusual timing and location patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9423076923076923,
+      "autoencoder": 0.5141700404858299,
+      "fused": 0.7036099865047234
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000443",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in Panama (PA), which is outside the customer's home country (Delhi), was initiated from a new device, and drove the account balance negative, indicating a high risk of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.9089068825910931,
+      "autoencoder": 0.9838056680161943,
+      "fused": 0.8011470985155196
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "VELOCITY_24H",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000702",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (MONEY_TRANSFER), the amount is 19.1x the account average, and it drove the account balance negative, all of which are suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.881578947368421,
+      "autoencoder": 0.7803643724696356,
+      "fused": 0.6985829959514169
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_HIGH",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000320",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in the Philippines, which is outside the customer's home country (Mysuru, India), was initiated from a new device, and caused the account balance to go negative, all of which are highly unusual for a customer with a low risk rating and verified KYC."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.8785425101214575,
+      "autoencoder": 0.8046558704453441,
+      "fused": 0.6716261808367071
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000566",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 02:00, outside normal activity hours, and the customer's KYC status is EXPIRED, which are both suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.9271255060728745,
+      "autoencoder": 0.9240890688259109,
+      "fused": 0.6220310391363022
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000938",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.8,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO) and the customer has a HIGH internal risk rating, which increases the likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6659919028340081,
+      "autoencoder": 0.8552631578947368,
+      "fused": 0.5897098515519568
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000720",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred in Singapore, which is outside the customer's home country (Ahmedabad), and the anomaly model scores (isolation forest: 0.93, autoencoder: 0.99) indicate a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.9331983805668016,
+      "autoencoder": 0.9898785425101214,
+      "fused": 0.676923076923077
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000408",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.96,
+      "justification": "The transaction occurred 841 km from the customer's home city (Kolkata) and used a new device, which is highly unusual for a customer with a verified KYC status and no prior risk indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.798582995951417,
+      "autoencoder": 0.9574898785425101,
+      "fused": 0.6601551956815115
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000079",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in GB, 2,781 km from the customer's home city of Jaipur, used a new device, and the customer has a HIGH risk rating, all of which are highly unusual for this customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.861336032388664,
+      "autoencoder": 0.7317813765182186,
+      "fused": 0.7446018893387315
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000598",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in Ukraine (UA), which is outside the customer's home country (India), and the card was used 6,366 km from the customer's home city (Ahmedabad), indicating a high-risk foreign transaction from a new device."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.930161943319838,
+      "autoencoder": 0.9757085020242915,
+      "fused": 0.8050944669365723
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000659",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.97,
+      "justification": "The transaction occurred at 04:00, involved a high-risk CRYPTO merchant in Romania (outside the customer's home country), used no authentication, was initiated from a new device, and drove the account balance negative, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9939271255060729,
+      "autoencoder": 0.909919028340081,
+      "fused": 0.9711538461538463
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000176",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.99,
+      "justification": "The transaction occurred at 04:49, outside normal activity hours, involved a high-risk merchant in a foreign country (UA), had no authentication, used a new device, and the amount was 214x the account average, driving the balance negative on an account with a HIGH risk rating and PENDING KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9969635627530364,
+      "autoencoder": 0.9888663967611336,
+      "fused": 0.995748987854251
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000861",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.9,
+      "justification": "The transaction occurred at a merchant in Panama (PA), 4,486 km from the customer's home city of Jaipur, at an unusual time (00:00), and involved a foreign transaction, which is highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7540485829959515,
+      "autoencoder": 0.8137651821862348,
+      "fused": 0.7036774628879892
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000797",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 782.46 times the account average, and it was initiated from a new device, which are both highly unusual for a customer with a low risk rating and a verified KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.354251012145749,
+      "autoencoder": 1.0,
+      "fused": 0.5396086369770581
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000448",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in Panama (PA), 1,702 km from the customer's home city of Chandigarh, using a new device, and involved a card-present purchase abroad, which is highly unusual for a customer with a low risk rating and a salary account."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7621457489878543,
+      "autoencoder": 0.9493927125506073,
+      "fused": 0.7467948717948718
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000591",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.82,
+      "justification": "The transaction occurred at 04:21, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER), and was initiated from a new device, which are all suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9676113360323887,
+      "autoencoder": 0.8917004048582996,
+      "fused": 0.8244601889338731
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000318",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 05:00, outside normal activity hours, and involved a high-risk merchant category (GIFT_CARD), which increases the likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.7844129554655871,
+      "autoencoder": 0.9271255060728745,
+      "fused": 0.6467948717948718
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000236",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in AE (outside the customer's home country), involved an amount 27.7x the account average, and took place 1,843 km from the customer's home city, all of which are highly unusual patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.8765182186234818,
+      "autoencoder": 0.9858299595141701,
+      "fused": 0.8253711201079621
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "AMOUNT_RATIO_HIGH",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000361",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Singapore, which is outside the customer's home country (Jaipur), the customer has a HIGH internal risk rating, and their KYC status is PENDING, all of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9291497975708503,
+      "autoencoder": 0.7064777327935222,
+      "fused": 0.6573549257759784
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000728",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 26.9x the account average, drove the account balance negative, and the customer's KYC status is EXPIRED, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.7105263157894737,
+      "autoencoder": 0.7904858299595142,
+      "fused": 0.5836369770580296
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "BALANCE_NEGATIVE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000852",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 24.6x the account average and drove the account balance negative, which is highly unusual for a customer with a medium risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.7054655870445344,
+      "autoencoder": 0.992914979757085,
+      "fused": 0.6095141700404858
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000660",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.96,
+      "justification": "The transaction occurred at 05:21, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER) in a foreign country (PH), had no authentication, and drove the account balance negative, which is highly unusual for the customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.9166666666666666,
+      "iforest": 0.9959514170040485,
+      "autoencoder": 0.9868421052631579,
+      "fused": 0.9615047233468286
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000158",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.92,
+      "justification": "The transaction occurred at a high-risk merchant in a foreign country (RU), involved a gift card purchase, and took place just 3.8 minutes after the previous transaction, which is highly unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.8333333333333334,
+      "iforest": 0.9807692307692307,
+      "autoencoder": 0.978744939271255,
+      "fused": 0.9211875843454791
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000969",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Indonesia (ID), which is outside the customer's home country (Chennai, India), and the card was used 2,138 km away from the customer's home, indicating a potential location-based anomaly."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.6953441295546559,
+      "autoencoder": 0.8846153846153846,
+      "fused": 0.6739878542510122
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000350",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, only 0.4 minutes after the previous transaction, and involved a merchant in GB, outside the customer's home country (Mumbai), which are all suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.9008097165991903,
+      "autoencoder": 0.7479757085020243,
+      "fused": 0.6946356275303643
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000740",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 01:00, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER), took place in a foreign country (ID), and was initiated from a new device, all of which are suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.937246963562753,
+      "autoencoder": 0.8228744939271255,
+      "fused": 0.7947031039136302
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000970",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction has a HIGH customer risk rating, and the anomaly model scores (isolation forest: 0.89, autoencoder: 0.98) indicate a high likelihood of being unusual, suggesting potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8896761133603239,
+      "autoencoder": 0.9777327935222672,
+      "fused": 0.5935560053981106
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000914",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Indonesia (ID), which is outside the customer's home country (Kochi, India), and the card was used 5,753 km away from the customer's home, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.8755060728744939,
+      "autoencoder": 0.8714574898785425,
+      "fused": 0.724089068825911
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000255",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.81,
+      "justification": "The transaction occurred at a merchant in AE, 6,521.50 km from the customer's home city of Mysuru, using a new device, and the customer has a HIGH risk rating, all of which are highly unusual for this customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.8836032388663968,
+      "autoencoder": 0.9139676113360324,
+      "fused": 0.8059379217273954
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000090",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 05:00, outside normal activity hours, used a new device, and referenced an account not found in the account master, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9817813765182186,
+      "autoencoder": 0.8026315789473685,
+      "fused": 0.6686572199730094
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "ORPHAN_ACCOUNT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000458",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores (isolation forest: 0.87, autoencoder: 0.95) indicate a high likelihood of being unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8663967611336032,
+      "autoencoder": 0.9483805668016194,
+      "fused": 0.5777665317139
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000063",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction was initiated from a new device, occurred during late night, and drove the account balance negative, which is highly unusual for a dormant account with a low-risk customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.854251012145749,
+      "autoencoder": 0.9726720647773279,
+      "fused": 0.6147435897435898
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000779",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in AE (outside the customer's home country), at an unusual time (05:00), and the anomaly model scores (especially isolation forest at 0.97) indicate a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.9746963562753036,
+      "autoencoder": 0.8087044534412956,
+      "fused": 0.7350202429149797
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "VELOCITY_24H",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000121",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.96,
+      "justification": "The transaction amount is 158.10 times the account average, which is highly unusual and indicates a potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.819838056680162,
+      "autoencoder": 0.9605263157894737,
+      "fused": 0.6341093117408907
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000601",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 17.4x the account average, initiated from a new device, and the customer has a HIGH risk rating and PENDING KYC status, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9757085020242915,
+      "autoencoder": 0.7813765182186235,
+      "fused": 0.6937921727395412
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000253",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, involved a high-risk merchant category (GAMBLING), and was initiated from a new device, all of which are suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9686234817813765,
+      "autoencoder": 0.9706477732793523,
+      "fused": 0.8484480431848853
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000348",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, involved a merchant in UA (outside the customer's home country), and was initiated from a new device, all of which are suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9220647773279352,
+      "autoencoder": 0.8147773279352226,
+      "fused": 0.687719298245614
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000933",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 954 km from the customer's home city (Jaipur), the customer has a HIGH risk rating, and is politically exposed, which are all suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9119433198380567,
+      "autoencoder": 0.9159919028340081,
+      "fused": 0.715047233468286
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK",
+      "POLITICALLY_EXPOSED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000157",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred only 2.5 minutes after the previous transaction, and there were 4 transactions in the preceding 24 hours, which is unusual for a single customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9078947368421053,
+      "autoencoder": 0.9180161943319838,
+      "fused": 0.68110661268556
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000281",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.92,
+      "justification": "The transaction occurred in Indonesia (ID), which is outside the customer's home country (Coimbatore, India), and took place at 01:00, which is outside normal activity hours, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9159919028340081,
+      "autoencoder": 0.7489878542510121,
+      "fused": 0.6328272604588393
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000355",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, only 2.1 minutes after the previous transaction, and involved a high-risk merchant category (GIFT_CARD), which are all suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.8218623481781376,
+      "autoencoder": 0.979757085020243,
+      "fused": 0.8071524966261807
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000730",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred in Panama (PA), which is far from the customer's home city of Hyderabad, and the ATM was 7,082.80 km from the customer's home, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.9544534412955465,
+      "autoencoder": 0.5455465587044535,
+      "fused": 0.65
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000868",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.81,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER) in a foreign country (AE), was initiated from a new device, and the customer has a KYC status of REJECTED."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.9736842105263158,
+      "autoencoder": 0.7408906882591093,
+      "fused": 0.8143724696356276
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000594",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 27.4x the account average, initiated from a new device, and the customer has a HIGH internal risk rating, all of which are highly unusual for this account."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8431174089068826,
+      "autoencoder": 0.8744939271255061,
+      "fused": 0.64861673414305
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000824",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING), and the anomaly model scores (especially the autoencoder at 0.98) indicate a highly unusual transaction pattern."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.6538461538461539,
+      "autoencoder": 0.9827935222672065,
+      "fused": 0.590991902834008
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000643",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.98,
+      "justification": "The transaction occurred 864 km from the customer's home city (Indore) at an unusual time (01:30) using a new ATM device, which is highly suspicious for a customer with a low risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9605263157894737,
+      "autoencoder": 0.9868421052631579,
+      "fused": 0.7508771929824561
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000973",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 661 km from the customer's home city (Indore), the customer has a HIGH risk rating, and their KYC status is EXPIRED, all of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.7064777327935222,
+      "autoencoder": 0.9018218623481782,
+      "fused": 0.6491565452091768
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000410",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction lacks authentication for a high-value purchase (32,607 INR) made 627 km from the customer's home city (Kolkata), which is highly unusual and raises suspicion."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.6983805668016194,
+      "autoencoder": 0.9504048582995951,
+      "fused": 0.6946356275303643
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000228",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, involved a high-risk merchant in a foreign country (RU), was initiated from a new device, and drove the account balance negative, which is highly unusual for a SALARY account with a LOW risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 0.9888663967611336,
+      "autoencoder": 0.9979757085020243,
+      "fused": 0.8960526315789474
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000336",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO), the customer has a HIGH internal risk rating, and their KYC status is PENDING, which collectively indicate a higher likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.868421052631579,
+      "autoencoder": 0.8441295546558705,
+      "fused": 0.6804318488529015
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000777",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in Ukraine (UA), outside the customer's home country (Mysuru), at an unusual time (04:00), and was initiated from a new device, which are all suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9473684210526315,
+      "autoencoder": 0.6224696356275303,
+      "fused": 0.6376180836707153
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000386",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER) in a foreign country (NG), was initiated from a new device, and the customer has a HIGH risk rating and PENDING KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.8333333333333334,
+      "iforest": 0.9838056680161943,
+      "autoencoder": 0.7348178137651822,
+      "fused": 0.8489203778677463
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000257",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 71x the account average, and the customer has a HIGH internal risk rating, which are both strong indicators of potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6568825910931174,
+      "autoencoder": 0.868421052631579,
+      "fused": 0.5909244264507423
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000442",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.9665991902834008,
+      "autoencoder": 0.9190283400809717,
+      "fused": 0.6323549257759784
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000400",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING), and the anomaly model scores (especially the autoencoder at 0.94) indicate a highly unusual transaction pattern."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.728744939271255,
+      "autoencoder": 0.944331983805668,
+      "fused": 0.6019230769230769
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000302",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer having a HIGH risk rating, an EXPIRED KYC status, and the transaction being initiated from a new device, which increases the likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.8977732793522267,
+      "autoencoder": 0.7995951417004049,
+      "fused": 0.6092105263157894
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000389",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction lacks authentication for a high-value transfer, the customer has a HIGH risk rating and pending KYC, and the anomaly model scores indicate a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.9311740890688259,
+      "autoencoder": 0.6831983805668016,
+      "fused": 0.7176450742240216
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "VELOCITY_24H",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000227",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.83,
+      "justification": "The transaction occurred at 02:00, outside normal activity hours, involved a high-risk merchant category (GAMBLING), and was initiated from a new device, which are all suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9524291497975709,
+      "autoencoder": 0.9331983805668016,
+      "fused": 0.8323549257759784
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000686",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 426x the account average, occurred at 02:00 (outside normal activity hours), and was initiated from a new device, all of which are highly unusual for this customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9392712550607287,
+      "autoencoder": 0.9979757085020243,
+      "fused": 0.7478407557354926
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000156",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in GB, which is outside the customer's home country (Pune), and only 4.0 minutes passed since the previous transaction, which combined with the foreign location and multiple transactions in a short time raises suspicion."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.9412955465587044,
+      "autoencoder": 0.8755060728744939,
+      "fused": 0.7783738191632928
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000245",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.74,
+      "justification": "The transaction is flagged as suspicious due to the merchant being in GB (outside the customer's home country), the use of a new device, and the customer's expired KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9858299595141701,
+      "autoencoder": 0.9392712550607287,
+      "fused": 0.7441970310391364
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000377",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at a merchant in Nigeria (NG), 11,076.90 km from the customer's home city of Chandigarh, using a new device, and involved a foreign transaction, which are all highly suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7236842105263158,
+      "autoencoder": 0.5728744939271255,
+      "fused": 0.6223009446693657
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000739",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Panama (PA), 6,262 km from the customer's home city of Mumbai, using a new device, and involved a purchase amount 5 times higher than the account's average, indicating a high-risk pattern."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7661943319838057,
+      "autoencoder": 0.6842105263157895,
+      "fused": 0.6684547908232119
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000146",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in AE (Dubai), which is outside the customer's home country (Mumbai), the customer has a HIGH internal risk rating, and their KYC status is PENDING, all of which are suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9200404858299596,
+      "autoencoder": 0.6923076923076923,
+      "fused": 0.6503711201079623
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000191",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred 980 km away from the customer's home city (Mysuru) while using an ATM, and the anomaly model scores (especially isolation forest and autoencoder) indicate a high level of unusualness for this transaction."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.9018218623481782,
+      "autoencoder": 0.7975708502024291,
+      "fused": 0.6098178137651822
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000673",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 05:00, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER), and the amount was 62x the account average."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.8421052631578947,
+      "autoencoder": 0.9524291497975709,
+      "fused": 0.771693657219973
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000874",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is flagged as suspicious due to the high-risk merchant category MONEY_TRANSFER and the use of a new device, which are both unusual for the customer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.7388663967611336,
+      "autoencoder": 0.9746963562753036,
+      "fused": 0.6474021592442645
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000183",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer having a HIGH internal risk rating, an EXPIRED KYC status, and the transaction being initiated from a new device, which are all red flags for potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.9149797570850202,
+      "autoencoder": 0.895748987854251,
+      "fused": 0.6432186234817814
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000461",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 04:41, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER) in Singapore (outside the customer's home country), used no authentication on a large 95,027.54 INR transaction, and was initiated from a new device, which drove the account balance negative."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9949392712550608,
+      "autoencoder": 0.5931174089068826,
+      "fused": 0.876417004048583
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000841",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred 1,109 km from the customer's home city (Mysuru) with a card physically present, and the account balance went negative after the transaction, which is highly unusual for a customer with a low risk rating and verified KYC."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8076923076923077,
+      "autoencoder": 0.9919028340080972,
+      "fused": 0.6732118758434548
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000412",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.7,
+      "justification": "The transaction occurred 1,211 km away from the customer's home city (Kolkata) and involved 3 transactions in the preceding 24 hours, which are unusual patterns for a credit card transaction."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.8168016194331984,
+      "autoencoder": 0.9676113360323887,
+      "fused": 0.7019905533063429
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "VELOCITY_24H"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000882",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 01:00, outside normal activity hours, and involved a card physically present 1,143 km from the customer's home city of Ahmedabad, which is highly unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6447368421052632,
+      "autoencoder": 0.9352226720647774,
+      "fused": 0.6073211875843454
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000531",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 183 times the account average, and the customer has a HIGH internal risk rating, which are both highly unusual for a legitimate transaction."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.45951417004048584,
+      "autoencoder": 0.9453441295546559,
+      "fused": 0.5547908232118759
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000264",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 38.9x the account average, initiated from a new device, and the customer has an expired KYC status, all of which are highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.917004048582996,
+      "autoencoder": 0.7459514170040485,
+      "fused": 0.6322199730094467
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000316",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 20.6x the account average, occurred at 00:00 (outside normal activity hours), used a new device, and drove the account balance negative."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.6882591093117408,
+      "autoencoder": 0.8421052631578947,
+      "fused": 0.6257759784075574
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000155",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in Singapore, which is outside the customer's home country (Pune), and only 0.8 minutes passed since the previous transaction, which is highly unusual and suggests potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9129554655870445,
+      "autoencoder": 0.8633603238866396,
+      "fused": 0.6995614035087719
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "RAPID_SUCCESSION"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000154",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in GB, which is outside the customer's home country (Pune), took place only 0.8 minutes after the previous transaction, and was initiated from a new device, all of which are suspicious patterns."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.9230769230769231,
+      "autoencoder": 0.8572874493927125,
+      "fused": 0.7341093117408907
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "RAPID_SUCCESSION",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000674",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred on a new device and involved a high-risk merchant category (GIFT_CARD), which are both suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.7672064777327935,
+      "autoencoder": 0.9352226720647774,
+      "fused": 0.6440620782726045
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000292",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, and the anomaly model scores (isolation forest: 0.93, autoencoder: 0.96) indicate a high likelihood of being unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.9261133603238867,
+      "autoencoder": 0.958502024291498,
+      "fused": 0.5987179487179488
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000141",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO) and was initiated from a new device, which are both suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6649797570850202,
+      "autoencoder": 0.9038461538461539,
+      "fused": 0.6039811066126854
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000780",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in Indonesia (ID), which is far from the customer's home city of Pune, involved a new ATM device, and the customer's KYC status is PENDING, indicating potential fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9777327935222672,
+      "autoencoder": 0.7621457489878543,
+      "fused": 0.7886302294197031
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000605",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Panama (PA), which is outside the customer's home country (India), the amount was 39.7x the account average, and the card was used 4,177 km from the customer's home city (Mumbai)."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.7874493927125507,
+      "autoencoder": 0.5779352226720648,
+      "fused": 0.6762820512820512
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "AMOUNT_RATIO_HIGH",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000215",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.92,
+      "justification": "The transaction occurred at a merchant in Singapore, 9,456.60 km from the customer's home city of Jaipur, with a HIGH risk rating and PENDING KYC status, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9342105263157895,
+      "autoencoder": 0.9453441295546559,
+      "fused": 0.8305330634278003
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000148",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred in AE, a foreign country, with no authentication on a high-value purchase, and the customer has a HIGH risk rating and PENDING KYC status, which are all highly suspicious."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.8333333333333334,
+      "iforest": 0.9615384615384616,
+      "autoencoder": 0.9615384615384616,
+      "fused": 0.9102564102564102
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NO_AUTH_HIGH_VALUE",
+      "VELOCITY_24H",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000388",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred in Singapore, which is outside the customer's home country (Jaipur), involved no authentication for a 10,955 INR transfer, and the customer has a HIGH risk rating and PENDING KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9706477732793523,
+      "autoencoder": 0.6649797570850202,
+      "fused": 0.7573549257759784
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NO_AUTH_HIGH_VALUE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000710",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 01:00, outside normal activity hours, and involved a high-risk merchant category (CRYPTO), which are both unusual for the customer's behavior."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8704453441295547,
+      "autoencoder": 0.9190283400809717,
+      "fused": 0.6701754385964911
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000402",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.96,
+      "justification": "The transaction occurred at 05:00, outside normal activity hours, involved a high-risk merchant category (CRYPTO) in a foreign country (AE), used no authentication, and was initiated from a new device, which combined with the negative balance after the transaction, indicates fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9564777327935222,
+      "autoencoder": 0.8987854251012146,
+      "fused": 0.956578947368421
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000126",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in GB, 5,907 km from the customer's home city of Kochi, at an unusual time (03:00), and involved a card present purchase, which is highly suspicious for a customer with a medium risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.8026315789473685,
+      "autoencoder": 0.7773279352226721,
+      "fused": 0.7073211875843455
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000218",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.9,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER), and the customer has a HIGH internal risk rating and a PENDING KYC status."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.9554655870445344,
+      "autoencoder": 0.8117408906882592,
+      "fused": 0.7301619433198381
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000775",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, with no authentication on a 19,533 INR transaction, and the customer has a KYC status of REJECTED, which are all highly suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9767206477732794,
+      "autoencoder": 0.9119433198380567,
+      "fused": 0.7332658569500674
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000175",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Romania (RO), 5,371 km from the customer's home city of Kochi, using a new device, and involved a card-present purchase abroad, which is highly unusual for a customer with a low risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.6629554655870445,
+      "autoencoder": 0.645748987854251,
+      "fused": 0.625944669365722
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000147",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.82,
+      "justification": "The transaction is suspicious due to the customer's HIGH risk rating, PENDING KYC status, and the anomaly model scores indicating unusual behavior (especially the isolation forest score of 0.85)."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8522267206477733,
+      "autoencoder": 0.6659919028340081,
+      "fused": 0.5887989203778677
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000397",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.99,
+      "justification": "The transaction occurred at 04:00, involved a high-risk CRYPTO merchant in RU (outside the customer's home country), used no authentication, was initiated from a new device, and the amount was 156x the account average, driving the balance negative."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9979757085020243,
+      "autoencoder": 0.9686234817813765,
+      "fused": 0.9899797570850202
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000053",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING) and was initiated from a new device, which are both suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.7479757085020243,
+      "autoencoder": 0.8896761133603239,
+      "fused": 0.6246288798920379
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000706",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is flagged as suspicious due to the high-risk merchant category MONEY_TRANSFER, a large transaction amount (20,041.47 INR) that is 7.17 times the account's average, and a high anomaly score from the autoencoder (0.92)."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.7135627530364372,
+      "autoencoder": 0.9220647773279352,
+      "fused": 0.5906882591093117
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000351",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, and only 3.7 minutes after the previous transaction, with 3 transactions in the preceding 24h, and involves a high-risk merchant category (GIFT_CARD)."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.7277327935222672,
+      "autoencoder": 0.8927125506072875,
+      "fused": 0.7528002699055331
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000718",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is flagged as suspicious due to the high anomaly scores from the isolation forest (0.97) and autoencoder (0.95) models, indicating unusual behavior for the account."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.9726720647773279,
+      "autoencoder": 0.9534412955465587,
+      "fused": 0.577834008097166
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000428",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction amount is 115.24 times the account average, which is highly unusual for a dormant account."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.21963562753036436,
+      "autoencoder": 0.6751012145748988,
+      "fused": 0.3684210526315789
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_EXTREME"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000342",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Singapore, which is outside the customer's home country (Mysuru), and the card was used 3,091 km from home on a new device, indicating a high risk of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.6781376518218624,
+      "autoencoder": 0.7925101214574899,
+      "fused": 0.674527665317139
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000741",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, and was conducted without authentication, which is highly unusual for a 19,978 INR transfer."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9251012145748988,
+      "autoencoder": 0.5718623481781376,
+      "fused": 0.5824224021592443
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000524",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 03:45, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER), and was initiated from a new device, which are all suspicious indicators."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.9595141700404858,
+      "autoencoder": 0.978744939271255,
+      "fused": 0.7481443994601888
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000068",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction lacks authentication for a high-value purchase (55,724 INR), and the amount is 303x the account average, which is highly unusual."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.3522267206477733,
+      "autoencoder": 0.9939271255060729,
+      "fused": 0.6038461538461538
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000005",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.94,
+      "justification": "The transaction occurred at 05:50, outside normal activity hours, involved a new device, and took place 1,135 km from the customer's home city, indicating a high likelihood of fraud."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.7834008097165992,
+      "autoencoder": 0.9423076923076923,
+      "fused": 0.6843792172739541
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000116",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 1,173 km from the customer's home city (Kolkata) and involved a new device, which are both unusual for a customer with a verified KYC status and a savings account with a stable average monthly balance."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.8066801619433198,
+      "autoencoder": 0.9321862348178138,
+      "fused": 0.6549932523616734
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000557",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.98,
+      "justification": "The transaction involves a high-risk money transfer to a merchant in the Philippines, a foreign transaction initiated from a new device with no authentication, and the amount is 93 times the account average, occurring at an unusual time."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.9919028340080972,
+      "autoencoder": 0.9473684210526315,
+      "fused": 0.9817813765182186
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_EXTREME",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000572",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at a merchant in Panama (PA), 8,678 km from the customer's home city of Hyderabad, with a HIGH internal risk rating, and the amount is 2.57 times the account's average transaction amount."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.7904858299595142,
+      "autoencoder": 0.3562753036437247,
+      "fused": 0.577361673414305
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000526",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred at 05:00, outside normal activity hours, involved a high-risk merchant category (MONEY_TRANSFER), had no authentication for a large amount (99,825 INR), and referenced an account that does not exist in the account master."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.75,
+      "iforest": 1.0,
+      "autoencoder": 0.6619433198380567,
+      "fused": 0.798582995951417
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NO_AUTH_HIGH_VALUE",
+      "NIGHT_HOURS",
+      "ORPHAN_ACCOUNT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000615",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING), and the anomaly model scores (especially the autoencoder at 0.91) indicate a highly unusual transaction pattern."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.7044534412955465,
+      "autoencoder": 0.9068825910931174,
+      "fused": 0.5834008097165992
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000321",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.8,
+      "justification": "The transaction occurred 1,168 km from the customer's home city (Noida) and used a new device, which are both unusual for a customer with a medium risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6518218623481782,
+      "autoencoder": 0.8825910931174089,
+      "fused": 0.5936572199730095
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000460",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.83,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, involved a high-risk merchant category (CRYPTO) located in the Philippines (outside the customer's home country), and drove the account balance negative, which is highly unusual for a customer with a low risk rating."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.9868421052631579,
+      "autoencoder": 0.8947368421052632,
+      "fused": 0.8311403508771928
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "HIGH_RISK_CATEGORY",
+      "NIGHT_HOURS",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000863",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.94,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, involved a high-risk merchant category (GAMBLING), and the amount was 10.6x the account average, while also being initiated from a new device."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.5833333333333334,
+      "iforest": 0.8309716599190283,
+      "autoencoder": 0.937246963562753,
+      "fused": 0.7637989203778678
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_HIGH",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000354",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, and only 1.5 minutes passed since the previous transaction, which is highly unusual for a subscription-based purchase."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.8208502024291497,
+      "autoencoder": 0.6892712550607287,
+      "fused": 0.6197031039136303
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "RAPID_SUCCESSION",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000362",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred in Romania, a foreign country to the customer's home city of Jaipur, involved no authentication for a high-value transaction (15.5x the account average), used a new device, and drove the account balance negative, all while the customer has a HIGH risk rating and pending KYC."
+    },
+    "triaged": true,
+    "scores": {
+      "rule": 1.0,
+      "iforest": 0.979757085020243,
+      "autoencoder": 0.729757085020243,
+      "fused": 0.9128542510121457
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NO_AUTH_HIGH_VALUE",
+      "AMOUNT_RATIO_HIGH",
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000652",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.2388663967611336,
+      "autoencoder": 0.06578947368421052,
+      "fused": 0.12473009446693659
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000602",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating, PENDING KYC status, and the transaction amount being 2.83 times higher than the account's average, combined with a high anomaly score from multiple models."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.6336032388663968,
+      "autoencoder": 0.72165991902834,
+      "fused": 0.4732456140350877
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000256",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is expired, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.3623481781376518,
+      "autoencoder": 0.13663967611336034,
+      "fused": 0.2163630229419703
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000667",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.3582995951417004,
+      "autoencoder": 0.7854251012145749,
+      "fused": 0.3431174089068826
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000621",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at 04:00, outside normal activity hours, and the anomaly model scores indicate a moderate level of unusualness, suggesting potential suspicious behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.2591093117408907,
+      "autoencoder": 0.4018218623481781,
+      "fused": 0.29827935222672064
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000876",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction drove the account balance negative and the customer carries a HIGH internal risk rating, which increases the likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.4605263157894737,
+      "autoencoder": 0.6700404858299596,
+      "fused": 0.40583670715249665
+    },
+    "rule_codes": [
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000376",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (CRYPTO) and the amount is 15.4 times the account average, which is highly unusual."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.4240890688259109,
+      "autoencoder": 0.8309716599190283,
+      "fused": 0.5431848852901484
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "AMOUNT_RATIO_HIGH"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000122",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with the customer's behavior and account context, with no suspicious patterns detected by the anomaly models or rule engine."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.020242914979757085,
+      "autoencoder": 0.04251012145748988,
+      "fused": 0.01882591093117409
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000981",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device and drove the account balance negative, which is unusual for the customer's typical behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.17510121457489877,
+      "autoencoder": 0.6305668016194332,
+      "fused": 0.30836707152496623
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000439",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.4676113360323887,
+      "autoencoder": 0.3248987854251012,
+      "fused": 0.30441970310391364
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000808",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a HIGH customer risk rating, and the amount is 1.87 times the account's average, which may indicate unusual spending behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.3259109311740891,
+      "autoencoder": 0.02834008097165992,
+      "fused": 0.13960863697705805
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000466",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.347165991902834,
+      "autoencoder": 0.5708502024291497,
+      "fused": 0.34207152496626175
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000658",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at a merchant in Delhi, which is the customer's home city, and the amount is within 30% of the account's average transaction amount, but the customer's KYC status is EXPIRED, which increases the risk of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.28643724696356276,
+      "autoencoder": 0.24898785425101214,
+      "fused": 0.1939608636977058
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000603",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is a legitimate Netflix subscription purchase made from the customer's home city of Kolkata using a verified device and OTP authentication, with no anomalies detected by the fraud models."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.201417004048583,
+      "autoencoder": 0.1882591093117409,
+      "fused": 0.11690283400809717
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000359",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, and the anomaly model scores are low, indicating a typical transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.2813765182186235,
+      "autoencoder": 0.1771255060728745,
+      "fused": 0.1375506072874494
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000785",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction has a HIGH customer risk rating, and the anomaly model scores (rule engine: 0.08, autoencoder: 0.08, combined: 0.17) indicate a low but notable level of unusualness, suggesting potential fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.37955465587044535,
+      "autoencoder": 0.07995951417004049,
+      "fused": 0.1711875843454791
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000776",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction occurred in the Philippines, which is outside the customer's home country (Mysuru, India), and took place at 04:00, which is outside normal activity hours, indicating a high likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.9463562753036437,
+      "autoencoder": 0.5172064777327935,
+      "fused": 0.5724021592442644
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000181",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating, PENDING KYC status, and the transaction occurring at a time when the customer has not made any other transactions in the last 24 hours."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.4433198380566802,
+      "autoencoder": 0.47368421052631576,
+      "fused": 0.34176788124156543
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000685",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 00:00, which is outside normal activity hours, and the amount (4,651.95 INR) is 3.15 times higher than the account's average transaction amount, indicating unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.7651821862348178,
+      "autoencoder": 0.1680161943319838,
+      "fused": 0.3132928475033738
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000735",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred on a new device, which is a red flag, and the account was dormant, making this activity unusual."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.4200404858299595,
+      "autoencoder": 0.36133603238866396,
+      "fused": 0.334412955465587
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000814",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 00:00, which is outside normal activity hours, and the amount (5,263.36 INR) is 1.72 times the account's average, indicating unusual spending behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.7520242914979757,
+      "autoencoder": 0.24595141700404857,
+      "fused": 0.33272604588394056
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000450",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor indicating potential fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.507085020242915,
+      "autoencoder": 0.029352226720647773,
+      "fused": 0.19426450742240217
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000082",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the isolation forest anomaly model score of 0.80 indicates a high level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8006072874493927,
+      "autoencoder": 0.20242914979757085,
+      "fused": 0.3342442645074224
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000419",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a HIGH customer risk rating, and the anomaly model scores (rule engine: 0.08, isolation forest: 0.06, autoencoder: 0.01, combined: 0.05) indicate unusual behavior for this customer."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.06275303643724696,
+      "autoencoder": 0.005060728744939271,
+      "fused": 0.053677462887989205
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000080",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is expired, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.46356275303643724,
+      "autoencoder": 0.24392712550607287,
+      "fused": 0.2789136302294197
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000800",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at a fuel station, but the customer's KYC status is PENDING, which may indicate incomplete verification and increases the risk of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.3896761133603239,
+      "autoencoder": 0.2388663967611336,
+      "fused": 0.2218960863697706
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000644",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.11234817813765183,
+      "autoencoder": 0.5799595141700404,
+      "fused": 0.20769230769230768
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000677",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a high-risk merchant category (GAMBLING), and the anomaly model scores (especially the autoencoder at 0.83) indicate a high level of unusualness for this transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.652834008097166,
+      "autoencoder": 0.832995951417004,
+      "fused": 0.545748987854251
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000883",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 05:00, which is outside normal activity hours, and the anomaly model scores (isolation forest: 0.74, autoencoder: 0.71, combined: 0.47) indicate a high likelihood of being unusual."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.7419028340080972,
+      "autoencoder": 0.7135627530364372,
+      "fused": 0.4699730094466936
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000070",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.11842105263157894,
+      "autoencoder": 0.2408906882591093,
+      "fused": 0.14112685560053978
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000184",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.027327935222672066,
+      "autoencoder": 0.08906882591093117,
+      "fused": 0.03491902834008097
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000037",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor in fraud detection."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.3532388663967611,
+      "autoencoder": 0.33704453441295545,
+      "fused": 0.2404183535762483
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000077",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the isolation forest model scored it at the 93rd percentile, indicating it is highly unusual compared to other transactions."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.9281376518218624,
+      "autoencoder": 0.3977732793522267,
+      "fused": 0.43110661268556005
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000691",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, and the anomaly model scores are very low, indicating no significant deviation from typical transaction patterns."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.152834008097166,
+      "autoencoder": 0.032388663967611336,
+      "fused": 0.0555668016194332
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000226",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, drove the account balance negative, and the customer has a HIGH internal risk rating, all of which are suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.5151821862348178,
+      "autoencoder": 0.9615384615384616,
+      "fused": 0.5430161943319838
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000515",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.011133603238866396,
+      "autoencoder": 0.25809716599190285,
+      "fused": 0.08076923076923077
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000634",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, and the customer has a HIGH internal risk rating, which increases the likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.2236842105263158,
+      "autoencoder": 0.048582995951417005,
+      "fused": 0.1483468286099865
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000879",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction is suspicious due to the use of a new device, a HIGH customer risk rating, and the transaction amount being slightly above the account's average, combined with the anomaly model scores indicating unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.25101214574898784,
+      "autoencoder": 0.6659919028340081,
+      "fused": 0.4084345479082321
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000920",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is not flagged as fraudulent because no rules were triggered, and the anomaly model scores are low, indicating the transaction is typical."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.1548582995951417,
+      "autoencoder": 0.5020242914979757,
+      "fused": 0.1970647773279352
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000664",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6467611336032388,
+      "autoencoder": 0.4352226720647773,
+      "fused": 0.35792847503373815
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000507",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at 04:00, which is outside normal activity hours, and the amount is slightly below the account average, but the anomaly model scores suggest a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.4574898785425101,
+      "autoencoder": 0.5526315789473685,
+      "fused": 0.33636977058029693
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000280",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at 00:00, outside normal activity hours, and the amount (25.00 INR) is significantly lower than the account average (0.01x), which may indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6700404858299596,
+      "autoencoder": 0.7226720647773279,
+      "fused": 0.4511470985155196
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000167",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 28.4x the account average, occurred at 00:00 (outside normal activity hours), and was initiated from a new device, which are all suspicious patterns."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.07692307692307693,
+      "autoencoder": 0.2722672064777328,
+      "fused": 0.23809041835357625
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000293",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction is flagged as suspicious due to the autoencoder anomaly model score of 0.95, which indicates it is highly unusual compared to other transactions."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.47368421052631576,
+      "autoencoder": 0.9534412955465587,
+      "fused": 0.4281376518218623
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000597",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.65,
+      "justification": "The transaction occurred on a device that is not new, and the customer's KYC status is EXPIRED, which may indicate a potential risk for fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.5364372469635628,
+      "autoencoder": 0.5020242914979757,
+      "fused": 0.34487179487179487
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000096",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the isolation forest anomaly model score of 0.85 indicates a high level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8532388663967612,
+      "autoencoder": 0.5425101214574899,
+      "fused": 0.4520580296896086
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000095",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 1.0,
+      "justification": "The transaction references an account that does not exist in the account master, which is a clear indicator of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.992914979757085,
+      "autoencoder": 0.06983805668016195,
+      "fused": 0.3854925775978407
+    },
+    "rule_codes": [
+      "ORPHAN_ACCOUNT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000340",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is expired, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.6022267206477733,
+      "autoencoder": 0.5910931174089069,
+      "fused": 0.4246626180836707
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000628",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.92,
+      "justification": "The transaction lacks authentication for a high-value purchase (41,915.94 INR) at a merchant 1,280.70 km from the customer's home city (Jaipur), and it drove the account balance negative, which is highly suspicious given the customer's HIGH risk rating."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.6666666666666666,
+      "iforest": 0.4058704453441296,
+      "autoencoder": 0.25101214574898784,
+      "fused": 0.46373144399460187
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "IMPOSSIBLE_TRAVEL",
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000755",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred in GB, which is outside the customer's home country (Hyderabad), and the card was used 2,816 km away from home, indicating a potential location-based anomaly."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.4898785425101215,
+      "autoencoder": 0.33299595141700405,
+      "fused": 0.44686234817813764
+    },
+    "rule_codes": [
+      "FOREIGN_MERCHANT",
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000976",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating and EXPIRED KYC status, which indicate potential fraud risk."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.2925101214574899,
+      "autoencoder": 0.0465587044534413,
+      "fused": 0.168387314439946
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000781",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction has a HIGH customer risk rating, and the autoencoder anomaly model score is 0.85, indicating a highly unusual transaction pattern."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.5526315789473685,
+      "autoencoder": 0.8502024291497976,
+      "fused": 0.45418353576248316
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000187",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the autoencoder anomaly model score is 0.92, indicating a highly unusual transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6417004048582996,
+      "autoencoder": 0.9230769230769231,
+      "fused": 0.5027665317139002
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000498",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 1,257 km away from the customer's home city (Jaipur), which is highly unusual for a customer with a low risk rating and no history of foreign transactions."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.7165991902834008,
+      "autoencoder": 0.7560728744939271,
+      "fused": 0.5418016194331984
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000878",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a HIGH customer risk rating, which increases the likelihood of fraud despite other factors appearing normal."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.3360323886639676,
+      "autoencoder": 0.35020242914979755,
+      "fused": 0.2392037786774629
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000690",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor in fraud detection."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.22267206477732793,
+      "autoencoder": 0.4149797570850202,
+      "fused": 0.22462887989203775
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000607",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at 02:00, which is outside normal activity hours, and the amount (596.00 INR) is significantly lower than the account's average monthly balance (15,049.34 INR), suggesting unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.39878542510121456,
+      "autoencoder": 0.24696356275303644,
+      "fused": 0.22705802968960861
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000178",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor in fraud detection."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.5425101214574899,
+      "autoencoder": 0.12955465587044535,
+      "fused": 0.23495276653171387
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000177",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the rule engine anomaly score is 0.08, indicating a low but notable level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.5657894736842105,
+      "autoencoder": 0.4311740890688259,
+      "fused": 0.33242240215924423
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000414",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.2834008097165992,
+      "autoencoder": 0.38461538461538464,
+      "fused": 0.23373819163292847
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000829",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is a legitimate healthcare purchase at a known merchant in the customer's home city, with no suspicious patterns detected by the anomaly models or rule engine."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.3350202429149798,
+      "autoencoder": 0.3684210526315789,
+      "fused": 0.21103238866396762
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000407",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.5597165991902834,
+      "autoencoder": 0.6265182186234818,
+      "fused": 0.35587044534412954
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000853",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical activity and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.6143724696356275,
+      "autoencoder": 0.42105263157894735,
+      "fused": 0.3106275303643724
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000563",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 13.5x the account average, the card was used 645 km from the customer's home city, and the customer's KYC status is EXPIRED, all of which are suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.5,
+      "iforest": 0.6093117408906883,
+      "autoencoder": 0.541497975708502,
+      "fused": 0.5452429149797571
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "IMPOSSIBLE_TRAVEL",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000556",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at 01:00, outside normal activity hours, and the amount (2,999.41 INR) is below the account's average spending, which may indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.5020242914979757,
+      "autoencoder": 0.2935222672064777,
+      "fused": 0.27199730094466934
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000166",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.18218623481781376,
+      "autoencoder": 0.49291497975708504,
+      "fused": 0.23586369770580295
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000807",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction details align with the customer's context and account activity."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.2125506072874494,
+      "autoencoder": 0.5870445344129555,
+      "fused": 0.23987854251012147
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000623",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 19.3x the account average, the customer has a HIGH internal risk rating, and the customer is politically exposed, all of which indicate a high likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.25,
+      "autoencoder": 0.3319838056680162,
+      "fused": 0.30792847503373816
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "CUSTOMER_HIGH_RISK",
+      "POLITICALLY_EXPOSED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000001",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.4665991902834008,
+      "autoencoder": 0.02631578947368421,
+      "fused": 0.21454116059379216
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000858",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a high anomaly score from the autoencoder (0.91), indicating it is highly unusual compared to other transactions, despite no rules being triggered."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.6265182186234818,
+      "autoencoder": 0.909919028340081,
+      "fused": 0.4609311740890688
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000574",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a HIGH customer risk rating, and the anomaly model scores (rule engine: 0.08, isolation forest: 0.41, autoencoder: 0.04, combined: 0.17) indicate a moderate level of unusualness, suggesting potential fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.4149797570850202,
+      "autoencoder": 0.03744939271255061,
+      "fused": 0.16906207827260455
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000267",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at a merchant in Noida, which is the customer's home city, and the amount is below the account's average spending, but the customer's KYC status is EXPIRED, which increases the risk of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6892712550607287,
+      "autoencoder": 0.4898785425101215,
+      "fused": 0.3870782726045884
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000073",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 12.6x the account average and drove the account balance negative, which is highly unusual for a dormant account."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.4807692307692308,
+      "autoencoder": 0.791497975708502,
+      "fused": 0.4816801619433198
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000648",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at a merchant in Noida, which is the customer's home city, and the amount is within 10% of the account's average, but the customer's KYC status is EXPIRED, which increases the risk of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.7246963562753036,
+      "autoencoder": 0.2145748987854251,
+      "fused": 0.31511470985155193
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000258",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 04:00, which is outside normal activity hours, and the anomaly model scores (isolation forest: 0.79, autoencoder: 0.80, combined: 0.51) indicate a high likelihood of being unusual."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.791497975708502,
+      "autoencoder": 0.8016194331983806,
+      "fused": 0.5112685560053981
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000480",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior, as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.16093117408906882,
+      "autoencoder": 0.6821862348178138,
+      "fused": 0.2529352226720648
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000953",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 02:00, outside normal activity hours, and the autoencoder anomaly score of 0.77 indicates a high level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.21153846153846154,
+      "autoencoder": 0.7692307692307693,
+      "fused": 0.32756410256410257
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000021",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the account was dormant, making this activity unusual."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.2479757085020243,
+      "autoencoder": 0.23684210526315788,
+      "fused": 0.17877867746288797
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000209",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.3917004048582996,
+      "autoencoder": 0.22469635627530365,
+      "fused": 0.25158569500674766
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000139",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 873.80 km away from the customer's home city (Chandigarh) while using an ATM, which is highly unusual for a customer with a low risk rating and a salary account."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.7196356275303644,
+      "autoencoder": 0.5961538461538461,
+      "fused": 0.49473684210526314
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000624",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction involves a politically exposed customer with a HIGH internal risk rating, which increases the likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.35020242914979755,
+      "autoencoder": 0.37550607287449395,
+      "fused": 0.2843792172739541
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "POLITICALLY_EXPOSED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000274",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the isolation forest anomaly model score of 0.72 indicates a high level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.7226720647773279,
+      "autoencoder": 0.44129554655870445,
+      "fused": 0.38252361673414303
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000212",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.06882591093117409,
+      "autoencoder": 0.2783400809716599,
+      "fused": 0.13748313090418351
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000421",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, and the customer has a HIGH internal risk rating, which increases the likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.4848178137651822,
+      "autoencoder": 0.19534412955465588,
+      "fused": 0.3373819163292847
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "NIGHT_HOURS",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000696",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at Max Hospital in Delhi, which is a legitimate healthcare merchant, and the transaction details align with typical purchase behavior. However, the customer's KYC status is EXPIRED, which may indicate a potential risk factor."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.32388663967611336,
+      "autoencoder": 0.11133603238866396,
+      "fused": 0.1639001349527665
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000919",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 629.50 km from the customer's home city (Mumbai), the customer has a HIGH risk rating, and their KYC status is PENDING, all of which are suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.4166666666666667,
+      "iforest": 0.909919028340081,
+      "autoencoder": 0.3856275303643725,
+      "fused": 0.5553306342780027
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000436",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction drove the account balance negative, and the account was previously dormant with a low amount relative to the account average, indicating unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6406882591093117,
+      "autoencoder": 0.7307692307692307,
+      "fused": 0.44477058029689603
+    },
+    "rule_codes": [
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000492",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction details align with the customer's typical activity."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.08198380566801619,
+      "autoencoder": 0.14068825910931174,
+      "fused": 0.06680161943319837
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000431",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.4352226720647773,
+      "autoencoder": 0.6052631578947368,
+      "fused": 0.3454790823211875
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000737",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior, as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.029352226720647773,
+      "autoencoder": 0.3582995951417004,
+      "fused": 0.11629554655870444
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000488",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.72165991902834,
+      "autoencoder": 0.5445344129554656,
+      "fused": 0.413191632928475
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000895",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as indicated by the anomaly model scores (rule engine: 0.00, isolation forest: 0.06, autoencoder: 0.03, combined: 0.03), and no fraud rules were triggered."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.06174089068825911,
+      "autoencoder": 0.03340080971659919,
+      "fused": 0.02854251012145749
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000384",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior, as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.05668016194331984,
+      "autoencoder": 0.7823886639676113,
+      "fused": 0.2517206477732793
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000724",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.10323886639676114,
+      "autoencoder": 0.6396761133603239,
+      "fused": 0.2562078272604589
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000296",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction is flagged as suspicious due to the high anomaly scores from the isolation forest (0.71) and autoencoder (0.96) models, indicating unusual behavior despite no rules being triggered."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.7095141700404858,
+      "autoencoder": 0.9595141700404858,
+      "fused": 0.5007085020242914
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000768",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior, as no rules were triggered, and the anomaly model scores are low, indicating a typical transaction for the account holder."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.20951417004048584,
+      "autoencoder": 0.15688259109311742,
+      "fused": 0.10991902834008097
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000865",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a low rule engine anomaly score (0.17), but high isolation forest (0.81) and autoencoder (0.82) scores, indicating unusual patterns in the transaction behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.8087044534412956,
+      "autoencoder": 0.8157894736842105,
+      "fused": 0.5540148448043185
+    },
+    "rule_codes": [
+      "VELOCITY_24H"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000980",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.95,
+      "justification": "The transaction drove the account balance negative, resulting in a balance of -486,216.33 INR after the transaction, which is highly unusual for a credit card account with a positive balance of 5,269.19 INR."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.458502024291498,
+      "autoencoder": 0.46963562753036436,
+      "fused": 0.31177462887989205
+    },
+    "rule_codes": [
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000052",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is flagged as suspicious due to the use of a new device, a HIGH customer risk rating, and a PENDING KYC status, which are all indicators of potential fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.9433198380566802,
+      "autoencoder": 0.520242914979757,
+      "fused": 0.5390688259109312
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000294",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor in fraud detection."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.46558704453441296,
+      "autoencoder": 0.8208502024291497,
+      "fused": 0.4192645074224021
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000810",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating and PENDING KYC status, which indicate potential fraud risk."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.5850202429149798,
+      "autoencoder": 0.25303643724696356,
+      "fused": 0.3180836707152497
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000564",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred on a frozen account, which is a strong indicator of potential fraud despite other factors appearing normal."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.0354251012145749,
+      "autoencoder": 0.08502024291497975,
+      "fused": 0.0361336032388664
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000306",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating and EXPIRED KYC status, which indicate potential fraud risk."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.3734817813765182,
+      "autoencoder": 0.13157894736842105,
+      "fused": 0.21818488529014846
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000125",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred at 01:00, outside normal activity hours, and was initiated from a new device, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.09919028340080972,
+      "autoencoder": 0.3350202429149798,
+      "fused": 0.1969298245614035
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000844",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at a merchant in Jaipur, which matches the customer's home city, but the customer's KYC status is EXPIRED, which is a red flag for potential fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8937246963562753,
+      "autoencoder": 0.6538461538461539,
+      "fused": 0.4976045883940621
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000457",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.41,
+      "justification": "The transaction is flagged as suspicious due to the high distance from home (924.10 km) and the large time interval since the previous transaction (55,712.82 minutes), which may indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.6255060728744939,
+      "autoencoder": 0.7449392712550608,
+      "fused": 0.4111336032388664
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000758",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.04149797570850203,
+      "autoencoder": 0.4676113360323887,
+      "fused": 0.18606612685560053
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000573",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a high level of unusualness for this transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.0840080971659919,
+      "autoencoder": 0.1214574898785425,
+      "fused": 0.09497300944669365
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000153",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores (especially isolation forest and autoencoder) indicate a higher-than-average likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.812753036437247,
+      "autoencoder": 0.7388663967611336,
+      "fused": 0.4988191632928475
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000165",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating and EXPIRED KYC status, which indicate potential compliance and fraud risks."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.7925101214574899,
+      "autoencoder": 0.11336032388663968,
+      "fused": 0.33842780026990554
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000627",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction occurred 1,260 km from the customer's home city of Mumbai, and the customer has a HIGH internal risk rating, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.6275303643724697,
+      "autoencoder": 0.2834008097165992,
+      "fused": 0.40661268556005403
+    },
+    "rule_codes": [
+      "IMPOSSIBLE_TRAVEL",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000813",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is a legitimate fuel purchase at a known merchant in the customer's home city, with a normal amount relative to the account average and no suspicious patterns detected."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.03744939271255061,
+      "autoencoder": 0.31275303643724695,
+      "fused": 0.10506072874493927
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000869",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 03:00, which is outside normal activity hours, and the distance from home (710.30 km) is unusually high for a purchase made in Pune, where the customer resides in Chandigarh."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.5010121457489879,
+      "autoencoder": 0.49898785425101216,
+      "fused": 0.33333333333333337
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000845",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is within normal parameters based on the account's average balance, the customer's location, and the absence of any triggered fraud rules."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.680161943319838,
+      "autoencoder": 0.08299595141700405,
+      "fused": 0.22894736842105262
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000569",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical activity and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.7378542510121457,
+      "autoencoder": 0.1720647773279352,
+      "fused": 0.2729757085020243
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000085",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is PENDING, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.6072874493927125,
+      "autoencoder": 0.06477732793522267,
+      "fused": 0.2682860998650472
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000519",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction lacks authentication and was initiated from a new device, which are both suspicious indicators for a purchase of 25,545.73 INR."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.26214574898785425,
+      "autoencoder": 0.4767206477732793,
+      "fused": 0.3549932523616734
+    },
+    "rule_codes": [
+      "NO_AUTH_HIGH_VALUE",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000913",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction was flagged as failed, and the anomaly model scores are low, indicating no significant deviation from normal behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.38461538461538464,
+      "autoencoder": 0.5222672064777328,
+      "fused": 0.2720647773279352
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000873",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the autoencoder anomaly model score is 0.94, indicating a highly unusual transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.0860323886639676,
+      "autoencoder": 0.9412955465587044,
+      "fused": 0.3415317139001349
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000471",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, and drove the account balance negative, which is unusual for a customer with a low risk rating and verified KYC status."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.5678137651821862,
+      "autoencoder": 0.8876518218623481,
+      "fused": 0.503306342780027
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "BALANCE_NEGATIVE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000798",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction drove the account balance negative, the customer has a HIGH internal risk rating, and their KYC status is PENDING, which are all suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.8248987854251012,
+      "autoencoder": 0.680161943319838,
+      "fused": 0.5515182186234817
+    },
+    "rule_codes": [
+      "BALANCE_NEGATIVE",
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000589",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, and the anomaly model scores are low, indicating a typical transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.4483805668016194,
+      "autoencoder": 0.395748987854251,
+      "fused": 0.25323886639676113
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000331",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at 01:00, outside normal activity hours, and the customer is 18 years old, which may indicate unusual behavior for a young adult making a purchase at that time."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6224696356275303,
+      "autoencoder": 0.3390688259109312,
+      "fused": 0.32179487179487176
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000161",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is a healthcare purchase at a known merchant in the customer's home city, with a verified KYC status and no suspicious flags detected."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.16497975708502025,
+      "autoencoder": 0.45040485829959515,
+      "fused": 0.1846153846153846
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000782",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and the customer's KYC status is PENDING, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.2894736842105263,
+      "autoencoder": 0.37044534412955465,
+      "fused": 0.26464237516869094
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000921",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 00:00, which is outside normal activity hours, and the amount is significantly lower than the account average (0.08x), suggesting unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6163967611336032,
+      "autoencoder": 0.4291497975708502,
+      "fused": 0.3469973009446693
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000818",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 03:00, which is outside normal activity hours, and the distance from home (543.40 km) suggests unusual geographic behavior for the customer, who is based in Kochi."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8370445344129555,
+      "autoencoder": 0.6174089068825911,
+      "fused": 0.4696693657219973
+    },
+    "rule_codes": [
+      "NIGHT_HOURS"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000012",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.5668016194331984,
+      "autoencoder": 0.5637651821862348,
+      "fused": 0.40583670715249665
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000337",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction amount is 11.9x the account average, and the customer's KYC status is EXPIRED, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.25,
+      "iforest": 0.5121457489878543,
+      "autoencoder": 0.4574898785425101,
+      "fused": 0.39089068825910933
+    },
+    "rule_codes": [
+      "AMOUNT_RATIO_HIGH",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000851",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction aligns with the customer's typical spending patterns and location."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.17611336032388664,
+      "autoencoder": 0.521255060728745,
+      "fused": 0.20921052631578946
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000593",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred at Max Hospital in Noida, which is the customer's home city, and the amount (INR 25.00) is very low compared to the account's average monthly balance (INR 45,829.22), suggesting a potentially suspicious or unusual healthcare-related purchase."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.4342105263157895,
+      "autoencoder": 0.7834008097165992,
+      "fused": 0.3986167341430499
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000033",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, the anomaly scores are low, and the transaction details align with the customer's context (same city, low amount relative to account balance, and successful authentication)."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.42813765182186236,
+      "autoencoder": 0.2894736842105263,
+      "fused": 0.21528340080971659
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000631",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a HIGH customer risk rating, which increases the likelihood of fraud despite other factors appearing normal."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.009109311740890687,
+      "autoencoder": 0.022267206477732792,
+      "fused": 0.042746288798920375
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000277",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor indicating potential fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.729757085020243,
+      "autoencoder": 0.46558704453441296,
+      "fused": 0.3919365721997301
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000962",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.9,
+      "justification": "The transaction is not flagged as fraudulent by any rule, and the anomaly model scores are below the threshold for high suspicion, indicating a low likelihood of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.7631578947368421,
+      "autoencoder": 0.6953441295546559,
+      "fused": 0.4375506072874494
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000584",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor in fraud detection."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.7793522267206477,
+      "autoencoder": 0.05060728744939271,
+      "fused": 0.2823211875843455
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000010",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is flagged as suspicious due to the high-risk merchant category (GIFT_CARD) and the use of a new device, which are both unusual for a customer with a low risk rating and verified KYC status."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.618421052631579,
+      "autoencoder": 0.8451417004048583,
+      "fused": 0.5724021592442645
+    },
+    "rule_codes": [
+      "HIGH_RISK_CATEGORY",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000671",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.49,
+      "justification": "The transaction is flagged as suspicious due to the high anomaly scores from the isolation forest (0.73) and autoencoder (0.90) models, indicating unusual behavior despite no rules being triggered."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.7257085020242915,
+      "autoencoder": 0.8997975708502024,
+      "fused": 0.4876518218623482
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000906",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores (isolation forest: 0.83, autoencoder: 0.87) indicate a high level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.8269230769230769,
+      "autoencoder": 0.8724696356275303,
+      "fused": 0.5431511470985155
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000114",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 03:00, outside normal activity hours, and was initiated from a new device, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.5030364372469636,
+      "autoencoder": 0.5334008097165992,
+      "fused": 0.37759784075573555
+    },
+    "rule_codes": [
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000200",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.85,
+      "justification": "The transaction is suspicious due to the customer's HIGH internal risk rating and EXPIRED KYC status, which indicate potential fraud risks."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.1508097165991903,
+      "autoencoder": 0.4605263157894737,
+      "fused": 0.2500674763832659
+    },
+    "rule_codes": [
+      "CUSTOMER_HIGH_RISK",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000963",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is a small, local purchase at a known merchant (Apollo Pharmacy) with a verified device, consistent with the customer's home city, and no anomalies detected by the models or rules."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.0465587044534413,
+      "autoencoder": 0.17307692307692307,
+      "fused": 0.0658906882591093
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000375",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.06578947368421052,
+      "autoencoder": 0.15182186234817813,
+      "fused": 0.09861673414304992
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000403",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and involves a customer with an expired KYC status, which are both suspicious indicators."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.9038461538461539,
+      "autoencoder": 0.12753036437246965,
+      "fused": 0.37607962213225365
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000767",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 1.0,
+      "justification": "The transaction references an account that does not exist in the account master, which is a clear indicator of fraud."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.9898785425101214,
+      "autoencoder": 0.057692307692307696,
+      "fused": 0.3809379217273954
+    },
+    "rule_codes": [
+      "ORPHAN_ACCOUNT"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000801",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction is suspicious due to the customer's expired KYC status, which indicates a potential risk for identity verification and compliance."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.6680161943319838,
+      "autoencoder": 0.6103238866396761,
+      "fused": 0.41683535762483126
+    },
+    "rule_codes": [
+      "KYC_NOT_VERIFIED"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000151",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction occurred on a dormant account with a low amount relative to the account's average, and the anomaly model scores indicate a moderate level of unusualness, suggesting potential suspicious activity."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.2034412955465587,
+      "autoencoder": 0.5566801619433198,
+      "fused": 0.2947031039136302
+    },
+    "rule_codes": [
+      "VELOCITY_24H"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000846",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction has a high anomaly score (isolation forest: 0.83, autoencoder: 0.91) and shows a large deviation from the account's average transaction amount (4.23x), indicating unusual behavior."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.832995951417004,
+      "autoencoder": 0.9058704453441295,
+      "fused": 0.52165991902834
+    },
+    "rule_codes": []
+  },
+  {
+    "transaction_id": "TXN_0000102",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the customer's home city (Mysuru) is far from the merchant city (Chandigarh), indicating a potential location anomaly."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.3674089068825911,
+      "autoencoder": 0.27125506072874495,
+      "fused": 0.22493252361673416
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000220",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction was initiated from a new device and involves a customer with a HIGH internal risk rating, which are both suspicious factors."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.16666666666666666,
+      "iforest": 0.7773279352226721,
+      "autoencoder": 0.11538461538461539,
+      "fused": 0.3344804318488529
+    },
+    "rule_codes": [
+      "NEW_DEVICE",
+      "CUSTOMER_HIGH_RISK"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000656",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.75,
+      "justification": "The transaction occurred at 02:00, outside normal activity hours, and was initiated from a new device, which are suspicious patterns for a healthcare purchase."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.3333333333333333,
+      "iforest": 0.21558704453441296,
+      "autoencoder": 0.3157894736842105,
+      "fused": 0.2927462887989204
+    },
+    "rule_codes": [
+      "VELOCITY_24H",
+      "NIGHT_HOURS",
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000486",
+    "verdict": {
+      "is_fraud": true,
+      "confidence": 0.65,
+      "justification": "The transaction was initiated from a new device, which is a suspicious factor, and the anomaly model scores indicate a moderate level of unusualness."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.08333333333333333,
+      "iforest": 0.19736842105263158,
+      "autoencoder": 0.49291497975708504,
+      "fused": 0.2404183535762483
+    },
+    "rule_codes": [
+      "NEW_DEVICE"
+    ]
+  },
+  {
+    "transaction_id": "TXN_0000983",
+    "verdict": {
+      "is_fraud": false,
+      "confidence": 0.95,
+      "justification": "The transaction is consistent with normal behavior as no rules were triggered, and the anomaly model scores are low, indicating a typical transaction."
+    },
+    "triaged": false,
+    "scores": {
+      "rule": 0.0,
+      "iforest": 0.5688259109311741,
+      "autoencoder": 0.40789473684210525,
+      "fused": 0.2930161943319838
+    },
+    "rule_codes": []
+  }
+]

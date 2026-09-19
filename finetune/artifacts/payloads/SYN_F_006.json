@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_F_006",
+  "kind": "counterfactual_fraud",
+  "is_fraud": true,
+  "outbound_prompt": "Correct verdict: FRAUD\n\nDe-identified transaction facts:\n- amount: 47.48\n- currency: INR\n- transaction_type: PURCHASE\n- channel: POS\n- status: SUCCESS\n- merchant_category: RESTAURANT\n- merchant_country: RO\n- merchant_city: Bucharest\n- device_type: POS_TERMINAL\n- is_new_device: True\n- auth_method: NONE\n- is_card_present: True\n- is_foreign_transaction: True\n- distance_from_home_km: 8639.9\n- time_since_prev_txn_mins: 58677.43\n- txn_count_last_24h: 0\n- txn_count_last_7d: 0\n- amount_to_account_avg_ratio: 0.045\n- balance_after_txn: 38297.44\n- transaction_hour: 4\n- is_weekend: True\n- acc_account_type: SALARY\n- acc_account_tier: BASIC\n- cust_risk_rating: LOW\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- merchant is in RO, outside the customer's home country\n- card physically present 8,640 km from home\n- occurred at 04:00, outside normal activity hours\n- initiated from a device not seen before\n\nAnomaly percentiles: rule 0.67, isolation forest 0.87, autoencoder 0.86, combined 0.78\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

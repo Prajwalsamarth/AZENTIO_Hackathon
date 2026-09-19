@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_N_006",
+  "kind": "clean_negative",
+  "is_fraud": false,
+  "outbound_prompt": "Correct verdict: NOT FRAUD\n\nDe-identified transaction facts:\n- amount: 3259.72\n- currency: INR\n- transaction_type: PURCHASE\n- channel: MOBILE_APP\n- status: SUCCESS\n- merchant_category: ECOMMERCE\n- merchant_country: IN\n- merchant_city: Chennai\n- device_type: IOS\n- is_new_device: False\n- auth_method: CVV\n- is_card_present: False\n- is_foreign_transaction: False\n- distance_from_home_km: 1.0\n- time_since_prev_txn_mins: 4904.07\n- txn_count_last_24h: 0\n- txn_count_last_7d: 3\n- amount_to_account_avg_ratio: 0.255\n- balance_after_txn: 88612.36\n- transaction_hour: 15\n- is_weekend: True\n- acc_account_type: CURRENT\n- acc_account_tier: GOLD\n- cust_risk_rating: MEDIUM\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- none\n\nAnomaly percentiles: rule 0.00, isolation forest 0.67, autoencoder 0.23, combined 0.27\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

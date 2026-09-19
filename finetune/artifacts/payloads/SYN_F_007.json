@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_F_007",
+  "kind": "counterfactual_fraud",
+  "is_fraud": true,
+  "outbound_prompt": "Correct verdict: FRAUD\n\nDe-identified transaction facts:\n- amount: 300318.56\n- currency: INR\n- transaction_type: PURCHASE\n- channel: MOBILE_APP\n- status: SUCCESS\n- merchant_category: TRAVEL\n- merchant_country: IN\n- merchant_city: Chandigarh\n- device_type: IOS\n- is_new_device: True\n- auth_method: NONE\n- is_card_present: False\n- is_foreign_transaction: False\n- distance_from_home_km: 14.3\n- time_since_prev_txn_mins: 54.0\n- txn_count_last_24h: 1\n- txn_count_last_7d: 1\n- amount_to_account_avg_ratio: 386.601\n- balance_after_txn: -279108.72\n- transaction_hour: 3\n- is_weekend: True\n- acc_account_type: CURRENT\n- acc_account_tier: SILVER\n- cust_risk_rating: LOW\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- no authentication on a 300,319 INR transaction\n- amount is 387x the account average\n- occurred at 03:00, outside normal activity hours\n- initiated from a device not seen before\n- drove the account balance negative\n\nAnomaly percentiles: rule 0.75, isolation forest 0.96, autoencoder 1.00, combined 0.89\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

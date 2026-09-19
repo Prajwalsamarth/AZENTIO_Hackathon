@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_F_002",
+  "kind": "counterfactual_fraud",
+  "is_fraud": true,
+  "outbound_prompt": "Correct verdict: FRAUD\n\nDe-identified transaction facts:\n- amount: 684019.38\n- currency: INR\n- transaction_type: PURCHASE\n- channel: POS\n- status: SUCCESS\n- merchant_category: ELECTRONICS\n- merchant_country: IN\n- merchant_city: Mumbai\n- device_type: POS_TERMINAL\n- is_new_device: True\n- auth_method: NONE\n- is_card_present: True\n- is_foreign_transaction: False\n- distance_from_home_km: 8.3\n- time_since_prev_txn_mins: 1.6\n- txn_count_last_24h: 5\n- txn_count_last_7d: 5\n- amount_to_account_avg_ratio: 86.004\n- balance_after_txn: -617452.26\n- transaction_hour: 22\n- is_weekend: False\n- acc_account_type: CURRENT\n- acc_account_tier: SILVER\n- cust_risk_rating: MEDIUM\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- no authentication on a 684,019 INR transaction\n- amount is 86x the account average\n- 5 transactions in the preceding 24h\n- only 1.6 minutes since the previous transaction\n- initiated from a device not seen before\n- drove the account balance negative\n\nAnomaly percentiles: rule 1.00, isolation forest 0.94, autoencoder 1.00, combined 0.98\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

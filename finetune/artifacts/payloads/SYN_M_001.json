@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_M_001",
+  "kind": "near_miss_negative",
+  "is_fraud": false,
+  "outbound_prompt": "Correct verdict: NOT FRAUD\n\nDe-identified transaction facts:\n- amount: 1298.86\n- currency: INR\n- transaction_type: PAYMENT\n- status: SUCCESS\n- merchant_category: P2P_TRANSFER\n- merchant_country: IN\n- merchant_city: Ahmedabad\n- is_new_device: True\n- is_card_present: False\n- is_foreign_transaction: False\n- distance_from_home_km: 8.4\n- time_since_prev_txn_mins: 22927.93\n- txn_count_last_24h: 0\n- txn_count_last_7d: 0\n- amount_to_account_avg_ratio: 0.348\n- balance_after_txn: 89584.62\n- transaction_hour: 9\n- is_weekend: False\n- acc_account_type: CREDIT_CARD\n- acc_account_tier: GOLD\n- cust_risk_rating: LOW\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- initiated from a device not seen before\n\nAnomaly percentiles: rule 0.08, isolation forest 0.47, autoencoder 0.46, combined 0.31\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

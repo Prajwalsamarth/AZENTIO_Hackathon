@@ -1,0 +1,647 @@
+{
+  "customers": {
+    "customer_id": {
+      "dtype": "string",
+      "raw_cardinality": 124,
+      "clean_cardinality": 124
+    },
+    "first_name": {
+      "dtype": "string",
+      "raw_cardinality": 38,
+      "clean_cardinality": 38
+    },
+    "last_name": {
+      "dtype": "string",
+      "raw_cardinality": 30,
+      "clean_cardinality": 30
+    },
+    "gender": {
+      "dtype": "category",
+      "raw_cardinality": 4,
+      "clean_cardinality": 3,
+      "nulls_from_tokens": 7,
+      "nulls_before": 7,
+      "nulls_after": 7
+    },
+    "date_of_birth": {
+      "dtype": "date",
+      "raw_cardinality": 120,
+      "clean_cardinality": 120,
+      "parsed_by_format": {
+        "%Y-%m-%d": 124
+      }
+    },
+    "age": {
+      "dtype": "int",
+      "raw_cardinality": 43,
+      "clean_cardinality": 43
+    },
+    "email": {
+      "dtype": "string",
+      "raw_cardinality": 120,
+      "clean_cardinality": 120
+    },
+    "phone_number": {
+      "dtype": "string",
+      "raw_cardinality": 118,
+      "clean_cardinality": 117,
+      "nulls_from_tokens": 3,
+      "nulls_before": 3,
+      "nulls_after": 3
+    },
+    "city": {
+      "dtype": "string",
+      "raw_cardinality": 16,
+      "clean_cardinality": 16
+    },
+    "state": {
+      "dtype": "string",
+      "raw_cardinality": 13,
+      "clean_cardinality": 13
+    },
+    "country": {
+      "dtype": "category",
+      "raw_cardinality": 1,
+      "clean_cardinality": 1
+    },
+    "postal_code": {
+      "dtype": "string",
+      "raw_cardinality": 120,
+      "clean_cardinality": 120
+    },
+    "occupation": {
+      "dtype": "category",
+      "raw_cardinality": 11,
+      "clean_cardinality": 10,
+      "nulls_from_tokens": 12,
+      "nulls_before": 12,
+      "nulls_after": 12
+    },
+    "annual_income": {
+      "dtype": "float",
+      "raw_cardinality": 114,
+      "clean_cardinality": 113,
+      "nulls_from_tokens": 7,
+      "nulls_before": 7,
+      "nulls_after": 7
+    },
+    "marital_status": {
+      "dtype": "category",
+      "raw_cardinality": 5,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 18,
+      "nulls_before": 18,
+      "nulls_after": 18
+    },
+    "education_level": {
+      "dtype": "category",
+      "raw_cardinality": 6,
+      "clean_cardinality": 5,
+      "nulls_from_tokens": 10,
+      "nulls_before": 10,
+      "nulls_after": 10
+    },
+    "employment_status": {
+      "dtype": "category",
+      "raw_cardinality": 6,
+      "clean_cardinality": 5,
+      "nulls_from_tokens": 9,
+      "nulls_before": 9,
+      "nulls_after": 9
+    },
+    "customer_since": {
+      "dtype": "date",
+      "raw_cardinality": 118,
+      "clean_cardinality": 118,
+      "parsed_by_format": {
+        "%Y-%m-%d": 124
+      }
+    },
+    "customer_segment": {
+      "dtype": "category",
+      "raw_cardinality": 5,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 3,
+      "nulls_before": 3,
+      "nulls_after": 3
+    },
+    "kyc_status": {
+      "dtype": "category",
+      "raw_cardinality": 5,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 6,
+      "nulls_before": 6,
+      "nulls_after": 6
+    },
+    "risk_rating": {
+      "dtype": "category",
+      "raw_cardinality": 4,
+      "clean_cardinality": 3,
+      "nulls_from_tokens": 18,
+      "nulls_before": 18,
+      "nulls_after": 18
+    },
+    "is_politically_exposed": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "0",
+        "1"
+      ]
+    },
+    "preferred_channel": {
+      "dtype": "category",
+      "raw_cardinality": 5,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 14,
+      "nulls_before": 14,
+      "nulls_after": 14
+    },
+    "email_verified": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "N",
+        "Y"
+      ]
+    },
+    "phone_verified": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "N",
+        "Y"
+      ]
+    },
+    "num_complaints_last_year": {
+      "dtype": "int",
+      "raw_cardinality": 4,
+      "clean_cardinality": 4
+    },
+    "_dedupe": {
+      "exact_duplicate_rows_dropped": 0,
+      "conflicting_primary_keys_quarantined": 0,
+      "conflicting_ids": []
+    },
+    "_rows": {
+      "raw": 124,
+      "after_dedupe": 124
+    },
+    "_flags": {
+      "rows_quarantined": 0
+    }
+  },
+  "accounts": {
+    "account_id": {
+      "dtype": "string",
+      "raw_cardinality": 178,
+      "clean_cardinality": 178
+    },
+    "customer_id": {
+      "dtype": "string",
+      "raw_cardinality": 120,
+      "clean_cardinality": 120
+    },
+    "account_type": {
+      "dtype": "category",
+      "raw_cardinality": 6,
+      "clean_cardinality": 5,
+      "nulls_from_tokens": 6,
+      "nulls_before": 6,
+      "nulls_after": 6
+    },
+    "account_status": {
+      "dtype": "category",
+      "raw_cardinality": 5,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 11,
+      "nulls_before": 11,
+      "nulls_after": 11
+    },
+    "currency": {
+      "dtype": "category",
+      "raw_cardinality": 1,
+      "clean_cardinality": 1
+    },
+    "open_date": {
+      "dtype": "date",
+      "raw_cardinality": 172,
+      "clean_cardinality": 172,
+      "parsed_by_format": {
+        "%Y-%m-%d": 178
+      }
+    },
+    "close_date": {
+      "dtype": "date",
+      "raw_cardinality": 2,
+      "clean_cardinality": 1,
+      "nulls_from_tokens": 177,
+      "parsed_by_format": {
+        "%Y-%m-%d": 1
+      },
+      "nulls_before": 177,
+      "nulls_after": 177
+    },
+    "branch_code": {
+      "dtype": "string",
+      "raw_cardinality": 40,
+      "clean_cardinality": 39,
+      "nulls_from_tokens": 19,
+      "nulls_before": 19,
+      "nulls_after": 19
+    },
+    "branch_city": {
+      "dtype": "string",
+      "raw_cardinality": 17,
+      "clean_cardinality": 16,
+      "nulls_from_tokens": 14,
+      "nulls_before": 14,
+      "nulls_after": 14
+    },
+    "current_balance": {
+      "dtype": "float",
+      "raw_cardinality": 178,
+      "clean_cardinality": 178
+    },
+    "avg_monthly_balance_6m": {
+      "dtype": "float",
+      "raw_cardinality": 178,
+      "clean_cardinality": 178
+    },
+    "credit_limit": {
+      "dtype": "float",
+      "raw_cardinality": 7,
+      "clean_cardinality": 7
+    },
+    "credit_utilization_pct": {
+      "dtype": "float",
+      "raw_cardinality": 22,
+      "clean_cardinality": 22
+    },
+    "overdraft_enabled": {
+      "dtype": "bool",
+      "raw_cardinality": 3,
+      "clean_cardinality": 2,
+      "nulls_from_tokens": 6,
+      "encodings_seen": [
+        "N",
+        "Y"
+      ],
+      "nulls_before": 6,
+      "nulls_after": 6
+    },
+    "card_type": {
+      "dtype": "category",
+      "raw_cardinality": 6,
+      "clean_cardinality": 5,
+      "nulls_from_tokens": 18,
+      "nulls_before": 18,
+      "nulls_after": 18
+    },
+    "is_joint_account": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "0",
+        "1"
+      ]
+    },
+    "num_linked_devices": {
+      "dtype": "int",
+      "raw_cardinality": 7,
+      "clean_cardinality": 7
+    },
+    "mobile_banking_enrolled": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "N",
+        "Y"
+      ]
+    },
+    "last_login_date": {
+      "dtype": "date",
+      "raw_cardinality": 86,
+      "clean_cardinality": 86,
+      "parsed_by_format": {
+        "%Y-%m-%d": 178
+      }
+    },
+    "avg_monthly_txn_count": {
+      "dtype": "int",
+      "raw_cardinality": 35,
+      "clean_cardinality": 35
+    },
+    "account_tier": {
+      "dtype": "category",
+      "raw_cardinality": 5,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 8,
+      "nulls_before": 8,
+      "nulls_after": 8
+    },
+    "_dedupe": {
+      "exact_duplicate_rows_dropped": 0,
+      "conflicting_primary_keys_quarantined": 0,
+      "conflicting_ids": []
+    },
+    "_rows": {
+      "raw": 178,
+      "after_dedupe": 178
+    },
+    "_flags": {
+      "is_orphan_customer": 0,
+      "rows_quarantined": 0
+    }
+  },
+  "transactions": {
+    "transaction_id": {
+      "dtype": "string",
+      "raw_cardinality": 988,
+      "clean_cardinality": 988
+    },
+    "account_id": {
+      "dtype": "string",
+      "raw_cardinality": 162,
+      "clean_cardinality": 162
+    },
+    "customer_id": {
+      "dtype": "string",
+      "raw_cardinality": 109,
+      "clean_cardinality": 108,
+      "nulls_from_tokens": 8,
+      "nulls_before": 8,
+      "nulls_after": 8
+    },
+    "transaction_timestamp": {
+      "dtype": "datetime",
+      "raw_cardinality": 980,
+      "clean_cardinality": 978,
+      "nulls_from_tokens": 10,
+      "parsed_by_format": {
+        "%Y-%m-%d %H:%M:%S": 910,
+        "%Y-%m-%dT%H:%M:%S": 15,
+        "%d/%m/%Y %H:%M": 53,
+        "%m-%d-%Y %H:%M:%S": 12
+      },
+      "ambiguous_day_month_decided_by_format_order": 30,
+      "nulls_before": 10,
+      "nulls_after": 10
+    },
+    "transaction_hour": {
+      "dtype": "int",
+      "raw_cardinality": 24,
+      "clean_cardinality": 24
+    },
+    "is_weekend": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "0",
+        "1"
+      ]
+    },
+    "amount": {
+      "dtype": "float",
+      "raw_cardinality": 925,
+      "clean_cardinality": 923,
+      "nulls_from_tokens": 5,
+      "currency_formatting_stripped": 17,
+      "nulls_before": 5,
+      "nulls_after": 5
+    },
+    "currency": {
+      "dtype": "category",
+      "raw_cardinality": 1,
+      "clean_cardinality": 1
+    },
+    "transaction_type": {
+      "dtype": "category",
+      "raw_cardinality": 17,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 75,
+      "variants_collapsed": 8,
+      "nulls_before": 75,
+      "nulls_after": 75
+    },
+    "channel": {
+      "dtype": "category",
+      "raw_cardinality": 23,
+      "clean_cardinality": 5,
+      "nulls_from_tokens": 73,
+      "variants_collapsed": 12,
+      "nulls_before": 73,
+      "nulls_after": 73
+    },
+    "status": {
+      "dtype": "category",
+      "raw_cardinality": 12,
+      "clean_cardinality": 4,
+      "nulls_from_tokens": 46,
+      "variants_collapsed": 4,
+      "nulls_before": 46,
+      "nulls_after": 46
+    },
+    "merchant_id": {
+      "dtype": "string",
+      "raw_cardinality": 35,
+      "clean_cardinality": 35
+    },
+    "merchant_name": {
+      "dtype": "string",
+      "raw_cardinality": 35,
+      "clean_cardinality": 35
+    },
+    "merchant_category": {
+      "dtype": "category",
+      "raw_cardinality": 74,
+      "clean_cardinality": 22,
+      "nulls_from_tokens": 83,
+      "variants_collapsed": 33,
+      "nulls_before": 83,
+      "nulls_after": 83
+    },
+    "merchant_city": {
+      "dtype": "string",
+      "raw_cardinality": 27,
+      "clean_cardinality": 26,
+      "nulls_from_tokens": 62,
+      "nulls_before": 62,
+      "nulls_after": 62
+    },
+    "merchant_country": {
+      "dtype": "category",
+      "raw_cardinality": 11,
+      "clean_cardinality": 11
+    },
+    "device_id": {
+      "dtype": "string",
+      "raw_cardinality": 341,
+      "clean_cardinality": 340,
+      "nulls_from_tokens": 79,
+      "nulls_before": 79,
+      "nulls_after": 79
+    },
+    "device_type": {
+      "dtype": "category",
+      "raw_cardinality": 21,
+      "clean_cardinality": 6,
+      "nulls_from_tokens": 99,
+      "variants_collapsed": 9,
+      "nulls_before": 99,
+      "nulls_after": 99
+    },
+    "is_new_device": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "0",
+        "1"
+      ]
+    },
+    "ip_address": {
+      "dtype": "string",
+      "raw_cardinality": 412,
+      "clean_cardinality": 411,
+      "nulls_from_tokens": 585,
+      "nulls_before": 585,
+      "nulls_after": 585
+    },
+    "auth_method": {
+      "dtype": "category",
+      "raw_cardinality": 8,
+      "clean_cardinality": 7,
+      "nulls_from_tokens": 144,
+      "nulls_before": 144,
+      "nulls_after": 144
+    },
+    "is_card_present": {
+      "dtype": "bool",
+      "raw_cardinality": 2,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "0",
+        "1"
+      ]
+    },
+    "is_foreign_transaction": {
+      "dtype": "bool",
+      "raw_cardinality": 8,
+      "clean_cardinality": 2,
+      "encodings_seen": [
+        "0",
+        "1",
+        "FALSE",
+        "N",
+        "TRUE",
+        "Y",
+        "no",
+        "yes"
+      ]
+    },
+    "distance_from_home_km": {
+      "dtype": "float",
+      "raw_cardinality": 433,
+      "clean_cardinality": 433
+    },
+    "time_since_prev_txn_mins": {
+      "dtype": "float",
+      "raw_cardinality": 691,
+      "clean_cardinality": 690,
+      "nulls_from_tokens": 156,
+      "nulls_before": 156,
+      "nulls_after": 156
+    },
+    "txn_count_last_24h": {
+      "dtype": "int",
+      "raw_cardinality": 8,
+      "clean_cardinality": 8
+    },
+    "txn_count_last_7d": {
+      "dtype": "int",
+      "raw_cardinality": 8,
+      "clean_cardinality": 8
+    },
+    "amount_to_account_avg_ratio": {
+      "dtype": "float",
+      "raw_cardinality": 633,
+      "clean_cardinality": 632,
+      "nulls_from_tokens": 156,
+      "nulls_before": 156,
+      "nulls_after": 156
+    },
+    "balance_after_txn": {
+      "dtype": "float",
+      "raw_cardinality": 988,
+      "clean_cardinality": 988
+    },
+    "_dedupe": {
+      "exact_duplicate_rows_dropped": 12,
+      "conflicting_primary_keys_quarantined": 0,
+      "conflicting_ids": []
+    },
+    "_rows": {
+      "raw": 1000,
+      "after_dedupe": 988
+    },
+    "_repairs": {
+      "merchant_category_from_merchant_id": {
+        "rows_missing": 83,
+        "rows_repaired": 83,
+        "rows_still_missing": 0
+      },
+      "merchant_name_from_merchant_id": {
+        "rows_missing": 0,
+        "rows_repaired": 0,
+        "rows_still_missing": 0
+      },
+      "customer_id_from_account_owner": {
+        "rows_missing": 8,
+        "rows_repaired": 0,
+        "rows_still_missing": 8
+      }
+    },
+    "_flags": {
+      "has_invalid_transaction_timestamp": 10,
+      "is_orphan_account": 8,
+      "is_orphan_customer": 0,
+      "rows_quarantined": 18
+    }
+  },
+  "_validation": {
+    "violations": {
+      "age_matches_date_of_birth": 0,
+      "transaction_hour_matches_timestamp": 0,
+      "is_weekend_matches_timestamp": 0,
+      "is_foreign_matches_merchant_country": 0,
+      "accounts_customer_id_orphans": 0,
+      "transactions_account_id_orphans": 8,
+      "transaction_customer_matches_account_owner": 0
+    },
+    "all_passed": true
+  },
+  "_summary": {
+    "customers": {
+      "rows": 124,
+      "columns": 27,
+      "quarantined": 0
+    },
+    "accounts": {
+      "rows": 178,
+      "columns": 23,
+      "quarantined": 0
+    },
+    "transactions": {
+      "rows": 988,
+      "columns": 33,
+      "quarantined": 18
+    }
+  }
+}

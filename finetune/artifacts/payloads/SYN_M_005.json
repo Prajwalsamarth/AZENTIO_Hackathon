@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_M_005",
+  "kind": "near_miss_negative",
+  "is_fraud": false,
+  "outbound_prompt": "Correct verdict: NOT FRAUD\n\nDe-identified transaction facts:\n- amount: 9028.6\n- currency: INR\n- transaction_type: WITHDRAWAL\n- channel: ATM\n- status: SUCCESS\n- merchant_category: ATM_WITHDRAWAL\n- merchant_country: IN\n- merchant_city: Bengaluru\n- device_type: ATM_MACHINE\n- is_new_device: True\n- auth_method: PIN\n- is_card_present: True\n- is_foreign_transaction: False\n- distance_from_home_km: 6.4\n- txn_count_last_24h: 0\n- txn_count_last_7d: 0\n- balance_after_txn: 10530.16\n- transaction_hour: 12\n- is_weekend: False\n- acc_account_type: CREDIT_CARD\n- acc_account_tier: SILVER\n- cust_risk_rating: MEDIUM\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- initiated from a device not seen before\n\nAnomaly percentiles: rule 0.08, isolation forest 0.88, autoencoder 0.36, combined 0.40\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}

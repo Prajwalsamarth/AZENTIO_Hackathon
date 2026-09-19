@@ -1,0 +1,6 @@
+{
+  "synthetic_id": "SYN_F_010",
+  "kind": "counterfactual_fraud",
+  "is_fraud": true,
+  "outbound_prompt": "Correct verdict: FRAUD\n\nDe-identified transaction facts:\n- amount: 606.46\n- currency: INR\n- transaction_type: PURCHASE\n- channel: POS\n- merchant_category: GAMBLING\n- merchant_country: IN\n- merchant_city: Indore\n- device_type: POS_TERMINAL\n- is_new_device: True\n- auth_method: NONE\n- is_card_present: True\n- is_foreign_transaction: False\n- distance_from_home_km: 1.7\n- time_since_prev_txn_mins: 60896.02\n- txn_count_last_24h: 0\n- txn_count_last_7d: 0\n- amount_to_account_avg_ratio: 0.012\n- balance_after_txn: 90289.89\n- transaction_hour: 3\n- is_weekend: False\n- acc_account_type: SAVINGS\n- acc_account_tier: GOLD\n- cust_kyc_status: VERIFIED\n\nDetector findings:\n- high-risk merchant category GAMBLING\n- occurred at 03:00, outside normal activity hours\n- initiated from a device not seen before\n\nAnomaly percentiles: rule 0.42, isolation forest 0.41, autoencoder 0.97, combined 0.58\n\nWrite the one-sentence justification for the verdict above, and a confidence between 0 and 1."
+}
